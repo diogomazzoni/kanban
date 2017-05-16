@@ -1,0 +1,56 @@
+// Icons
+// -------------------------
+
+
+[data-icons8]:before,
+.icons8-attention:before,
+.icons8-box:before,
+.icons8-briefcase:before,
+.icons8-calendar:before,
+.icons8-calendar-2:before,
+.icons8-checked-checkbox-2:before,
+.icons8-checked-filled:before,
+.icons8-clock:before,
+.icons8-clock-2:before,
+.icons8-clock-filled:before,
+.icons8-document:before,
+.icons8-file-filled:before,
+.icons8-home:before,
+.icons8-home-filled:before,
+.icons8-info:before,
+.icons8-info-filled:before,
+.icons8-ok-filled:before,
+.icons8-picture:before,
+.icons8-picture-filled:before,
+.icons8-rating-filled:before,
+.icons8-search-filled:before,
+.icons8-settings-filled:before,
+.icons8-unlock:before,
+{ @include icons8-font; }
+
+[data-icons8]:before { content: attr(data-icons8); }
+
+.icons8-attention:before { content: $icons8-var-attention; }
+.icons8-box:before { content: $icons8-var-box; }
+.icons8-briefcase:before { content: $icons8-var-briefcase; }
+.icons8-calendar:before { content: $icons8-var-calendar; }
+.icons8-calendar-2:before { content: $icons8-var-calendar-2; }
+.icons8-checked-checkbox-2:before { content: $icons8-var-checked-checkbox-2; }
+.icons8-checked-filled:before { content: $icons8-var-checked-filled; }
+.icons8-clock:before { content: $icons8-var-clock; }
+.icons8-clock-2:before { content: $icons8-var-clock-2; }
+.icons8-clock-filled:before { content: $icons8-var-clock-filled; }
+.icons8-document:before { content: $icons8-var-document; }
+.icons8-file-filled:before { content: $icons8-var-file-filled; }
+.icons8-home:before { content: $icons8-var-home; }
+.icons8-home-filled:before { content: $icons8-var-home-filled; }
+.icons8-info:before { content: $icons8-var-info; }
+.icons8-info-filled:before { content: $icons8-var-info-filled; }
+.icons8-ok-filled:before { content: $icons8-var-ok-filled; }
+.icons8-picture:before { content: $icons8-var-picture; }
+.icons8-picture-filled:before { content: $icons8-var-picture-filled; }
+.icons8-rating-filled:before { content: $icons8-var-rating-filled; }
+.icons8-search-filled:before { content: $icons8-var-search-filled; }
+.icons8-settings-filled:before { content: $icons8-var-settings-filled; }
+.icons8-unlock:before { content: $icons8-var-unlock; }
+

@@ -1,0 +1,2667 @@
+<div id="templates">
+
+    <div id="server-side-template-tags">{{=[[ ]]=}}</div>
+
+    <div id="template-dashboard-menu">
+        <div class="link-menu">
+            <ul>
+                <li class="boards-tab"><a href="#boards">Boards</a></li>
+                <li class="agenda-tab"><a href="#agenda">Your Agenda</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div id="template-task-list-items-simple">
+        <div class="task-list-items">
+            <ul id="completed-tasks-list" class="list condensed task-list">
+                {{#each complete}}
+                <li id="task-{{id}}" class="{{statusClass}} {{classes}} completed" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details">{{task}}</div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-assigned">
+                    <span class="tag">
+                        <span class="user-image">{{{userImage}}}</span>
+                        <span>{{assignedToName}}</span>
+                    </span>
+                    </div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            <ul id="incomplete-tasks-list" class="list condensed task-list">
+                {{#each list}}
+                <li id="section-{{this.section.id}}" class="{{statusClass}} list-header"
+                    data-id={{this.section.id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details">{{this.section.name}}</div>
+
+                    <div class="task-actions">
+
+
+                    </div>
+                </li>
+                {{#each this.tasks}}
+                <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details">{{task}}</div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-assigned">
+                    <span class="tag">
+                        <span class="user-image">{{{userImage}}}</span>
+                        <span>{{assignedToName}}</span>
+                    </span>
+                    </div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{/each}}
+
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div id="template-cards">
+        <div id="card-view">
+
+            <div id="card-view-complete">
+                <div class="task-list-items">
+                <h5>[[taskList.completedTasks]]</h5>
+                    <ul id="completed-tasks-list" class="list condensed task-list">
+                        {{#each complete}}
+                        <li id="task-{{id}}" class="{{statusClass}} {{classes}} completed" data-id={{id}}>
+                            <div class="sort-handle task-status-indicator"></div>
+                            <div class="status-indicators">
+
+                                <div class="is-task-completed task-status-indicator"></div>
+                                <div class="saving-indicator task-status-indicator"></div>
+                                <div class="retry-save save-item" title="[[cards.errorSaving]]"></div>
+                            </div>
+
+                            <div class="task-details">{{task}}</div>
+                            <div class="task-due-date">{{dueDateHumanized}}</div>
+                            <div class="task-assigned">
+                    <span class="tag">
+                        <span class="user-image">{{{userImage}}}</span>
+                        <span>{{assignedToName}}</span>
+                    </span>
+                            </div>
+                            <div class="task-meta">
+                                {{#hasNotes}}
+                                <span class="has-notes task-list-icon ti-notepad"
+                                      title="[[cards.hasNotes]]"></span>
+                                {{/hasNotes}}
+                            </div>
+                            <div class="task-actions">
+
+
+                                <div class="view-task ti-eye" title="[[cards.viewTask]]"></div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            <div id="card-view-incomplete">
+                            {{#each list}}
+                            <div class="card-column {{this.section.type}} {{this.section.id}}" data-id="{{this.section.id}}">
+                                <div class="card-column-header">{{this.section.name}}</div>
+                                <div class="cards connected-cards viewport">
+                                    {{#each this.tasks}}
+                                    <div class="card {{#if hasMeta}}has-meta{{/if}} {{#this.isComplete}}complete{{/this.isComplete}} {{statusClass}} {{classes}}"
+                                         data-id="{{this.id}}">
+                                        {{#../../userCanCompleteTasks}}
+                                        <div class="is-task-completed task-status-indicator"></div>
+                                        {{/../../userCanCompleteTasks}}
+                                        <div class="saving-indicator task-status-indicator"></div>
+                                        <div class="retry-save save-item" title="[[cards.errorSaving]]"></div>
+                                        <div class="task-details">{{this.task}}</div>
+
+                                        <a class="user-image" href="{{userLink}}">{{{userImage}}}</a>
+
+                                        {{#if hasMeta}}
+                                        <div class="card-meta">
+
+                                            {{#if hasDueDate}}
+                                            <span class="due-date"><i class="icons8-clock"></i>{{dueDateHumanized}}</span>
+                                            {{/if}}
+
+                                            {{#if hasFiles}}
+                                            <span class="has-files icons8-file-filled"></span>
+                                            {{/if}}
+
+                                            {{#if hasNotes}}
+                                            <span class="has-notes icons8-attention"></span>
+                                            {{/if}}
+                                        </div>
+                                        {{/if}}
+
+                                    </div>
+                                    {{/each}}
+                                </div>
+
+                                {{#../userCanCreateTasks}}
+                                <div class="new-card">
+                                    <input class="new-task-input" type="text" placeholder="[[cards.newTask]]"
+                                           data-section-id="{{this.section.id}}">
+                                </div>
+                                {{/../userCanCreateTasks}}
+
+                            </div>
+                            {{/each}}
+
+
+                            {{#userCanCreateTasks}}
+                            <div class="new-section">
+                                <div class="card-column-header">&nbsp;</div>
+                                <input id="new-section-input" type="text" placeholder="[[cards.newSection]]" name="name"></div>
+                            {{/userCanCreateTasks}}
+                        </div>
+
+
+        </div>
+    </div>
+
+    <div id="template-card-column">
+        <div class="card-column {{type}}" data-id="{{id}}">
+            <div class="card-column-header">{{name}}</div>
+            <div class="cards connected-cards viewport">
+                {{#each tasks}}
+                <div class="card" data-id="{{this.id}}">
+                    {{#../userCanCompleteTasks}}
+                    <div class="is-task-completed task-status-indicator"></div>
+                    {{/../userCanCompleteTasks}}
+                    <div class="saving-indicator task-status-indicator"></div>
+                    <div class="retry-save save-item" title="[[cards.errorSaving]]"></div>
+                    <div class="task-details">{{this.task}}</div>
+
+                    <a class="user-image" href="{{userLink}}">{{userImage}}</a>
+
+                </div>
+                {{/each}}
+            </div>
+
+            {{#userCanCreateTasks}}
+            <div class="new-card">
+                <input class="new-task-input" type="text" placeholder="[[cards.newTask]]"
+                       data-section-id="{{id}}">
+            </div>
+            {{/userCanCreateTasks}}
+        </div>
+    </div>
+
+    <div id="template-kanban-card">
+        <div class="card" data-id="{{id}}">
+            {{#userCanCompleteTasks}}
+            <div class="is-task-completed task-status-indicator"></div>
+            {{/userCanCompleteTasks}}
+            <div class="saving-indicator task-status-indicator"></div>
+            <div class="retry-save save-item" title="[[cards.errorSaving]]"></div>
+            <div class="task-details">{{task}}</div>
+        </div>
+    </div>
+
+    <div id="template-section-options">
+        <form action="" class="form">
+            <h3>Edit Section</h3>
+
+            <div class="field">
+                <label for="">Section name</label>
+                <input id="set_section_name" type="text" name="name" value="{{section.name}}">
+            </div>
+
+            <div class="field">
+                <label for="">Mark tasks complete when moved into this section</label>
+                <input id="mark-tasks-complete" type="checkbox" name="action_mark_tasks_complete">
+            </div>
+            <hr>
+            <div id="delete_section" class="button danger">Delete section</div>
+        </form>
+
+    </div>
+
+    <div id="template-smart-menu">
+        <div class="smart-menu {{class}}">
+            <ul class="smart-menu-items">
+                {{#items}}
+                <li id="{{itemId}}"><span></span>{{itemText}}</li>
+                {{/items}}
+
+            </ul>
+            <div class="more">
+                <span class="sidebar-icon ti-more-alt more-icon"></span>
+
+                <span class="smart-menu-more-text">[[smartMenu.more]]</span>
+                <span class="smart-menu-menu-text">[[smartMenu.menu]]</span>
+                <span class="sidebar-icon ti-angle-down menu-icon"></span>
+                <ul class="smart-menu-overflow">
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="template-dropdown-button">
+        <div class="dropdown-button {{classes}}">
+            <span class="main-button button">{{buttonText}}</span>
+
+            <ul class="dropdown-button-dropdown">
+                {{#buttons}}
+                <li id="{{id}}" class="{{class}}"><span></span>{{text}}</li>
+                {{/buttons}}
+
+            </ul>
+
+
+        </div>
+    </div>
+
+
+    <div id="template-boards-list">
+        <div id="boards-list">
+            <ul>
+                {{#each currentBoards}}
+                <li class="board {{statusText}}"  data-id="{{id}}">
+                    <span class="board-settings icons8-settings-filled"></span>
+                    <a href="#boards/{{id}}">
+                        <h4>{{name}}</h4>
+                        <p>{{description}}</p>
+                    </a>
+                </li>
+
+                {{#if third}}
+                <li class="board new-board">
+                    <div class="board-content">
+                        <span class="new-board-icon">+</span>
+                        <h4>New Board</h4>
+                        <p>Create a new project board</p>
+                    </div>
+                </li>
+                {{/if}}
+
+                {{/each}}
+
+                {{#if noThird}}
+                <li class="board new-board">
+                    <div class="board-content">
+                        <span class="new-board-icon">+</span>
+                        <h4>New Board</h4>
+                        <p>Create a new project board</p>
+                    </div>
+                </li>
+                {{/if}}
+            </ul>
+
+            {{#if hasArchived}}
+            <div id="archived-boards">
+                <h5 id="archived-title" >Archived ({{archivedCount}})
+                    <span class="ti-angle-right closed"></span>
+                    <span class="ti-angle-down open"></span>
+                </h5>
+                <ul>
+                    {{#each archivedBoards}}
+                    <li class="board {{statusText}}"  data-id="{{id}}">
+                        <span class="board-settings icons8-settings-filled"></span>
+                        <a href="#boards/{{id}}">
+                            <h4>{{name}}</h4>
+                            <p>{{description}}</p>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+
+    <div id="template-board-dropdown">
+        <ul class="board-dropdown dropdown-button-dropdown">
+            <li id="edit-board-button">Edit Board</li>
+            {{#if isArchived}}
+            <li id="unarchive-board-button">Unarchive Board</li>
+            {{else}}
+            <li id="archive-board-button">Archive Board</li>
+            {{/if}}
+            <li id="delete-board-button">Delete Board</li>
+        </ul>
+    </div>
+
+    <div id="template-board-buttons">
+        <div class="link-menu">
+            <ul>
+                <li class="tasks-tab"><a class="board-tasks" href="#boards/{{id}}/tasks">Tasks</a></li>
+                <li class="files-tab"><a class="board-files" href="#boards/{{id}}/files">Files</a></li>
+                <li class="notes-tab"><a class="board-notes" href="#boards/{{id}}/notes">Notes</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div id="template-main-bottom-buttons">
+            <ul>
+                <li class="boards-button">
+                    <a href="#boards">
+                        <span class="icons8-briefcase icon"></span>
+                        <span class="text">Boards</span>
+                    </a>
+
+                </li>
+
+                <li class="agenda-button">
+                    <a href="#agenda">
+                        <span class="icons8-calendar-2 icon"></span>
+                        <span class="text">Agenda</span>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+        <div id="template-board-bottom-buttons">
+            <ul>
+                <li class="tasks-button">
+                    <a href="#boards/{{id}}">
+                        <span class="icons8-checked-checkbox-2 icon"></span>
+                        <span class="text">Tasks</span>
+                    </a>
+                </li>
+
+                <li class="files-button">
+                    <a href="#boards/{{id}}/files">
+                        <span class="icons8-document icon"></span>
+                        <span class="text">Files</span>
+                    </a>
+                </li>
+
+                <li class="notes-button">
+                    <a href="#boards/{{id}}/notes">
+                        <span class="icons8-info icon"></span>
+                        <span class="text">Notes</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="template-bottom-navigation">
+            <div id="bottom-navigation">
+
+            </div>
+        </div>
+
+    <div id="template-secondary-menu">
+        <div id="secondary-menu">
+            <a id="settings-button" href="#settings"><span class="icons8-settings-filled"></span></a>
+            <a id="search-button" href="#search"><span class="icons8-search-filled"></span></a>
+            <a id="logout-button" href="#logout"><span class="icons8-unlock"></span></a>
+        </div>
+    </div>
+
+
+
+    <div id="template-panel-two">
+        {{!TODO:Why does primary panel have top info class and not the secondary panel?}}
+        <div id="{{id}}" class="panel {{type}}">
+            <div class="panel-info">
+                <div id="logo"><a href="#boards"><span class="icons8-home"></span>Home</a></div>
+                <div class="panel-info-left">
+                    <div id="logo"><a href="#boards"><span class="icons8-home"></span>Home</a></div>
+
+                    <div class="panel-info-left-inner">
+
+                    </div>
+                </div>
+
+                <div class="panel-info-middle">
+                    <h3 class="panel-title">{{title}}</h3>
+                </div>
+
+                <div class="panel-info-right">
+                    <div class="panel-actions-wrapper">
+
+
+                        <div class="panel-actions">
+                            &nbsp;
+                        </div>
+
+                        <div id="discuss-button-wrapper" class="hide-on-mobile"></div>
+                    </div>
+
+                </div>
+                <div id="running-timer-space"></div>
+            </div>
+
+
+            <div class="inner">
+                <div class="inner-left ">
+
+                    <div class="notification">
+                        <span class="notificiation-message"></span>
+                        <span class="close"></span>
+                    </div>
+
+                    <div class="inner-menu">
+                        <div class="left-menu"></div>
+
+
+                        <div class="right-menu secondary-inner-menu">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="inner-content-wrapper nano top">
+                        <div class="inner-content content">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inner-right">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="template-empty-task-list">
+        <div class="empty-task-list">
+            <img src="client/images/crane.svg" alt="">
+            <h3>No tasks yet. Add your first section, and then you can start adding tasks.</h3>
+        </div>
+    </div>
+
+    <div id="template-info-panel">
+        <div id="info-panel-wrapper">
+            <div id="info-panel-overlay"></div>
+            <div id="info-panel">
+                <div class="title">
+                    <span class="close ti-close"></span>
+
+                    <h3></h3>
+                    <div class="button-space"></div>
+                </div>
+                <div class="nano">
+                    <div class="content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="template-panel-filter">
+        <div class="panel-filter" data-filter-property="{{filterProperty}}">
+            <div class="panel-selected-filter">
+                <span class="selected-filter-name">{{selected}}</span>
+                <span class="caret caret-down"></span>
+            </div>
+            <ul>
+                {{#filters}}
+                <li data-value="{{value}}" data-param="{{param}}">{{name}}</li>
+                {{/filters}}
+            </ul>
+        </div>
+    </div>
+
+    <div id="template-panel-sort">
+        <div class="panel-sort">
+            <div class="arrow-up"></div>
+            <div class="arrow-down"></div>
+        </div>
+
+
+    </div>
+
+    <div id="template-panel-actions">
+        <div> {{#actions}}
+            <div id="{{id}}" class="panel-action {{class}}"
+                 data-action="{{actionUrl}}">{{panelAction}}
+            </div>
+            {{/actions}}
+        </div>
+    </div>
+
+
+
+    <div id="template-button-set">
+        <ul id="{{id}}" class="button-set">
+            {{#buttons}}
+            <li id="{{buttonId}}" class="{{class}}"><span></span>{{buttonText}}</li>
+            {{/buttons}}
+        </ul>
+    </div>
+
+    <div id="template-button">
+        <div id="{{buttonId}}" class="{{buttonType}} button">{{buttonText}}</div>
+    </div>
+
+
+    <div id="template-list">
+        <div class="nano">
+
+            <ul class="list detailed-list content {{listClass}}">
+                {{#listItems}}
+                <li class="{{statusText}} {{statusClass}}" data-id="{{id}}">
+                    <div class="top-details">{{title}}</div>
+                    <div class="bottom-details">
+                        <div class="detail">{{meta1}}</div>
+                        <div class="detail">{{meta2}}</div>
+                        <div class="detail">{{meta3}}</div>
+                    </div>
+                    <div class="status"></div>
+                </li>
+                {{/listItems}}
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="template-project-file-list">
+        <div id="file-list-wrapper" class="list condensed file-list">
+            <div class="list-main-header">
+                <div class="file-extension"></div>
+                <div class="file-title">[[fileList.title]]</div>
+                <div class="file-type">[[fileList.type]]</div>
+                <div class="file-uploader-name">[[fileList.uploadedBy]]</div>
+                <div class="file-create-date">[[fileList.date]]</div>
+            </div>
+
+            <ul class="">
+                {{#files}}
+                <li class="{{statusClass}} {{type}} {{extension}}" data-id={{id}}>
+                    <div class="file-extension"><span>{{extension}}</span></div>
+                    <div class="file-title">{{name}}</div>
+                    <div class="file-type">{{type}}</div>
+                    <div class="file-uploader-name">{{uploadedBy}}</div>
+                    <div class="file-create-date">{{dateText}}</div>
+                </li>
+                {{/files}}
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="template-task-list-items">
+        <div class="task-list-items">
+            <ul id="completed-tasks-list" class="list condensed task-list">
+                {{#each complete}}
+                <li id="task-{{id}}" class="{{statusClass}} {{classes}} completed" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details"><input type="text" value="{{task}}" disabled="disabled"></div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-assigned">
+                    <span class="tag">
+                        <span class="user-image">{{{userImage}}}</span>
+                        <span>{{assignedToName}}</span>
+                    </span>
+                    </div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            <ul id="incomplete-tasks-list" class="list condensed task-list">
+                {{#each list}}
+                <li id="section-{{this.section.id}}" class="{{statusClass}} list-header"
+                    data-id={{this.section.id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details"><input type="text" value="{{this.section.name}}"></div>
+
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{#each this.tasks}}
+                <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details"><input type="text" value="{{task}}"></div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-assigned">
+                    <span class="tag">
+                        <span class="user-image">{{{userImage}}}</span>
+                        <span>{{assignedToName}}</span>
+                    </span>
+                    </div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{/each}}
+
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="template-task-list-line-item">
+        <li id="{{id}}" class="{{statusClass}} {{classes}}" data-id={{id}}>
+            <div class="sort-handle task-status-indicator"></div>
+            <div class="status-indicators">
+
+                <div class="is-task-completed task-status-indicator"></div>
+                <div class="saving-indicator task-status-indicator"></div>
+                <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+            </div>
+
+            <div class="task-details"><input type="text" value="{{task}}"></div>
+            <div class="task-due-date">{{dueDateHumanized}}</div>
+            <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
+            <div class="task-meta">
+                {{#hasNotes}}
+                <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                {{/hasNotes}}
+            </div>
+            <div class="task-actions">
+
+                <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+            </div>
+        </li>
+    </div>
+    <div id="template-project-task-list-wrapper">
+        <div id="tasks-list-wrapper"></div>
+    </div>
+
+
+    <div id="template-project-task-list">
+        <div id="tasks-list">
+            <ul id="completed-tasks-list" class="list condensed task-list">
+                {{#complete}}
+                <li id="{{id}}" class="{{statusClass}} {{classes}}" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details">{{task}}</div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{/complete}}
+            </ul>
+            <ul id="incomplete-tasks-list" class="list condensed task-list">
+                {{#each list}}
+                <li id="{{this.section.id}}" class="{{statusClass}} list-header" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details">{{this.section.name}}</div>
+
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{#each this.tasks}}
+                <li id="{{id}}" class="{{statusClass}} {{classes}}" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator task-status-indicator"></div>
+                        <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    </div>
+
+                    <div class="task-details">{{task}}</div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                    </div>
+                </li>
+                {{/each}}
+
+                {{/each}}
+                {{#incomplete}}
+                <li id="{{id}}" class="{{statusClass}} {{classes}}" data-id={{id}}>
+                    <div class="sort-handle task-status-indicator"></div>
+                    <div class="status-indicators">
+
+                        <div class="is-task-completed task-status-indicator"></div>
+                        <div class="saving-indicator  task-status-indicator"></div>
+                    </div>
+                    <div class="retry-save save-item" title="[[taskDetails.errorSavingTitle]]"></div>
+                    <div class="task-details">{{task}}</div>
+                    <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
+                    <div class="task-due-date">{{dueDateHumanized}}</div>
+                    <div class="task-meta">
+                        {{#hasNotes}}
+                        <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                        {{/hasNotes}}
+                    </div>
+                    <div class="task-actions">
+
+                        <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                        <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                        <div class="discuss-task ti-comment-alt" title="[[taskDetails.discuss]]"></div>
+                        <div class="start-timer-for-task ti-timer" title="[[taskDetails.startTimer]]"></div>
+                    </div>
+                </li>
+                {{/incomplete}}
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div id="template-project-task-list-item">
+        <li id="{{id}}" class="{{statusClass}}" data-id={{id}}>
+            <div class="sort-handle task-status-indicator"></div>
+            <div class="status-indicators">
+
+                <div class="is-task-completed task-status-indicator"></div>
+                <div class="saving-indicator task-status-indicator"></div>
+            </div>
+            <div class="task-details">{{task}}</div>
+            <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
+            <div class="task-due-date">{{dueDateHumanized}}</div>
+            <div class="task-meta">
+                {{#hasNotes}}
+                <span class="has-notes task-list-icon ti-notepad" title="[[taskDetails.hasNotesTitle]]"></span>
+                {{/hasNotes}}
+            </div>
+            <div class="task-actions">
+
+                <div class="delete-task ti-trash" title="[[taskDetails.deleteTitle]]"></div>
+                <div class="view-task ti-eye" title="[[taskDetails.viewTitle]]"></div>
+                <div class="discuss-task ti-comment-alt" title="[[taskDetails.discussTask]]"></div>
+                <div class="start-timer-for-task ti-timer" title="[[taskDetails.startTimer]]"></div>
+            </div>
+        </li>
+    </div>
+
+    <div id="template-task-list-message">
+        <div class="task-list-message {{type}}">
+            {{message}}
+
+            {{#closeButtonText}}
+            <span class="close">{{closeButtonText}}</span>
+            {{/closeButtonText}}
+
+            {{#noCloseButtonText}}
+            <span class="close">x</span>
+            {{/noCloseButtonText}}
+
+        </div>
+
+    </div>
+
+
+    <div id="template-user-image">
+        <a href="{{userLink}}" class="user-image">{{{userImage}}}</a>
+    </div>
+
+    <div id="template-task-details-alternate">
+        <div class="item-details task-details-alternate {{completeClass}} {{#userIsClient}}client-task-details{{/userIsClient}}">
+            <div class="task-content-section">
+                <div class="task-content">
+                    {{#userIsAdmin}}
+                    <div class="is-task-completed "></div>
+                    {{/userIsAdmin}}
+
+                    <div class="task-text">{{task}}</div>
+
+                    <div class="user-image-wrapper">
+                        <a href="{{userLink}}" class="user-image">{{{userImage}}}</a>
+                    </div>
+
+                </div>
+                <div class="task-description">{{notes}}</div>
+                <div class="task-details-meta">
+
+                    {{#if hasStatus}}
+                    <div class="status">
+                        <span class="icons8-rating-filled"></span>
+                        <span class="meta-tag">[[taskDetails.status]]: </span>{{statusText}}
+                    </div>
+                    {{/if}}
+
+                    {{#if hasDueDate}}
+                    <div class="due-date">
+                        <span class="icons8-clock-2"></span>
+                        <span class="meta-tag">[[taskDetails.due]]:</span>{{dueDateText}}
+                    </div>
+                    {{/if}}
+
+                    {{#if isComplete}}
+                    <div class="due-date">
+                        <span class="icons8-ok-filled"></span>
+                        <span class="meta-tag">[[taskDetails.completedDate]]:</span>{{completedDateText}}
+                    </div>
+                    {{/if}}
+
+                    {{#if formattedTotalTime}}
+                    <div class="due-date">
+                        <span class="icons8-clock-filled"></span>
+                        <span class="meta-tag">[[taskDetails.totalTime]]:</span>{{formattedTotalTime}}
+                    </div>
+                    {{/if}}
+
+                    {{#if hasTaskWeight}}
+                    <div class="task-weight">
+                        <span>[[taskDetails.taskWeight]]:</span>
+
+                        <div class="task-weight-value">
+                            <div class="value">{{weightText}}</div>
+                            <a id="change-task-weight" class="icon ti-pencil"
+                               title="[[taskDetails.taskWeightTitle]]"></a>
+                        </div>
+                    </div>
+                    {{/if}}
+
+                </div>
+
+                <div class="task-files">
+
+                    <ul class="attachment-list">
+                        <li>[[taskDetails.noAttachments]]</li>
+                    </ul>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="task-timer-section">
+                <hr>
+                {{#userCanCreateTasks}}
+                <div class="task-timer">
+                    <h6>[[taskDetails.timer]]
+                        <span class="ti-angle-right closed"></span>
+                        <span class="ti-angle-down"></span>
+                    </h6>
+
+                    <div id="timer" class="hidden">
+
+
+                        <div class="timer-buttons">
+                            <div id="start-timer" class="button green">[[taskDetails.startTimer]]</div>
+                            <div id="stop-timer" class="button dark">[[taskDetails.stopTimer]]</div>
+                            <div id="enter-time" class="">[[taskDetails.enterTime]]</div>
+                        </div>
+                        <div id="inactive-timer"></div>
+                        <div id="elapsed-time"></div>
+                    </div>
+                </div>
+                {{/userCanCreateTasks}}
+
+
+                <div id="task-time-entries-wrapper">
+                    <h6>[[taskDetails.timeEntries]]
+                        <span class="ti-angle-right closed"></span>
+                        <span class="ti-angle-down"></span>
+                    </h6>
+
+                    <div id="task-time-entries" class="hidden"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div id="template-task-time-entries">
+        <ul>
+            <li class="header">
+                <div class="time-entry-details">
+                    <div>[[taskDetails.timeEntryDate]]</div>
+                    <div>[[taskDetails.timeEntryUser]]</div>
+                    <div>[[taskDetails.timeEntryTime]]</div>
+                </div>
+            </li>
+            {{#timeEntries}}
+            <li data-id="{{id}}">
+                <div class="time-entry-details">
+                    <div class="time-entry-date">{{startDateText}}</div>
+
+                    <div class="time-entry-time">{{timeText}}</div>
+                </div>
+                <div class="time-entry-delete ti-trash" title="[[taskDetails.deleteTimeEntryTitle]]"></div>
+            </li>
+            {{/timeEntries}}
+        </ul>
+    </div>
+
+    <div id="template-task-time-entry">
+        <li data-id="{{id}}" class="new">
+            <div class="time-entry-details">
+                <div class="time-entry-date">{{startDateText}}</div>
+                <div class="time-entry-user">{{userName}}</div>
+                <div class="time-entry-time">{{timeText}}</div>
+            </div>
+            <div class="time-entry-delete" title="[[taskDetails.deleteTimeEntryTitle]]"></div>
+        </li>
+    </div>
+
+
+    <div id="template-form-time-entry">
+        <form id="time-entry-form" action="#" method="post" data-model="timeEntry" novalidate>
+            <div class="fields">
+                <div class="field">
+                    <label for="">[[timeEntryForm.hours]]</label>
+                    <input type="text" name="hours" placeholder="[[timeEntryForm.hoursPlaceholder]]">
+                </div>
+
+                <div class="field">
+                    <label for="">[[timeEntryForm.minutes]]</label>
+                    <input type="text" name="minutes" placeholder="[[timeEntryForm.minutesPlaceholder]]">
+                </div>
+
+                <div class="field">
+                    <label for="">[[timeEntryForm.seconds]]</label>
+                    <input type="text" name="seconds" placeholder="[[timeEntryForm.secondsPlaceholder]]">
+                </div>
+            </div>
+
+            <input type="submit" value="[[form.submit]]">
+        </form>
+    </div>
+
+
+    <div id="template-task-attachment">
+        <div class="task-attachments-wrapper">
+            <h5>Files</h5>
+            <ol class="attachment-list">
+                {{#files}}
+                    <li><a href="#boards/{{project_id}}/files/{{id}}"><span class="icons8-picture"></span>{{name}}</a></li>
+                {{/files}}
+            </ol>
+        </div>
+    </div>
+
+    <div id="template-document-viewer">
+        <div class="document-viewer-wrapper dv-markup clearfix">
+            <div class="document-viewer-outer dv-markup clearfix">
+                <div class="document-viewer dv-markup clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="template-document-viewer-error">
+        <div class="error-loading">[[fileView.errorLoading]]</div>
+    </div>
+
+    <div id="template-document-viewer-unsupported-type">
+        <div class="unsupported-type">[[fileView.unsupportedType]]</div>
+    </div>
+
+    <div id="template-file-list-preview">
+        <li class="file-list-preview">
+
+            <div class="file-dv"><span class="loading-message">[[fileView.loading]]</span></div>
+
+            <div class="file-meta-wrapper">
+                <div class="file-name">{{name}}</div>
+                <!--<div class="file-options"><span class="caret caret-down"></span>-->
+
+                <!--<ul class="dropdown-menu">-->
+                <!--<li><a href="#">Download</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">Delete</a></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <div class="file-meta"><span>[[fileView.uploaded]]:</span> {{formattedUploadDate}}</div>
+            </div>
+        </li>
+    </div>
+
+    <div id="template-file-list-simple-tiles">
+        <ul id="file-list-simple-tiles">
+            {{#files}}
+            <li class="file-simple-tile {{type}}" title="{{name}}" data-id="{{id}}">
+                <div class="file-icon"></div>
+                <div class="file-name">{{name}}</div>
+            </li>
+            {{/files}}
+        </ul>
+    </div>
+
+    <div id="template-file">
+        <div class="file-view">
+
+
+            <div class="file-view-inner">
+                <div class="file-dv unfloat-on-mobile"></div>
+
+                <div class="file-meta-wrapper unfloat-on-mobile">
+                    <div class="file-name">{{name}}</div>
+
+
+                    <hr/>
+
+                    <div class="file-notes">
+                        <h6>[[fileView.notes]]</h6>
+
+                        <p class="notes-content">{{notes}}</p>
+                    </div>
+
+                    <div class="file-meta"><span>[[fileView.uploadedDate]]:</span> {{formattedUploadDate}}</div>
+                    <div class="file-meta"><span>[[fileView.uploadedBy]]:</span> {{uploadedBy}}</div>
+                    <div class="file-meta"><span>[[fileView.size]]:</span> {{sizeKilobytes}}kb</div>
+
+
+                    <div id="file-notes">
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="template-files-view-type">
+        <ul id="file-view-type" class="button-set hide-on-mobile">
+            <li id="line-items-view"><span class="ti-view-list"></span></li>
+            <li id="simple-tiles-view"><span class=" ti-layout-grid3"></span></li>
+            <li id="tiles-view"><span class=" ti-layout-grid2"></span></li>
+        </ul>
+    </div>
+
+    <div id="template-form-edit-file-notes">
+        <form action="#" method="post" data-model="file" novalidate>
+            <div class="field">
+                <label for="">[[fileView.notes]]</label>
+                <textarea required="required" name="notes">{{notes}}</textarea>
+
+            </div>
+
+            <input type="submit" value="[[form.submit]]">
+        </form>
+    </div>
+
+
+    <div id="template-user-quick-access-panel">
+        <div class="user-quick-access-panel">
+            <div class="quick-access-top">
+                <div class="user-image user-image-large">
+                    <a href="#"></a>
+                </div>
+                <h4>{{first_name}} {{last_name}}</h4>
+            </div>
+            <div class="quick-access-content">
+                <ul>
+                    <li><span class="icon ti-user"></span><a href="#users/{{id}}">[[userQuickAccessView.goToProfile]]</a>
+                    </li>
+                    <li><span class="icon ti-lock"></span><a id="change-password" href="#">[[userQuickAccessView.changePassword]]</a>
+                    </li>
+                    <li><span class="icon ti-image"></span>
+
+                        <div id="quick-access-change-photo" class="button clear-button">
+
+                            [[userQuickAccessView.changeProfilePhoto]]
+                            <input id="fileupload" type="file" name="files[]" multiple>
+                        </div>
+                    </li>
+                    <li><span class="icon ti-thumb-up"></span><a
+                            href="#admin/feedback">[[userQuickAccessView.referAFriend]]</a></li>
+                    <li><span class="icon ti-power-off"></span><a href="#logout">[[userQuickAccessView.logout]]</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="template-agenda">
+
+        <div id="agenda">
+
+            <div id="agenda-main-content">
+                <div class="summary">
+                    <div id="summary-widgets">
+
+                        {{#if canCreateTask}}
+                        <div class="summary-widget active" data-tab="tasks">
+                            <h5>[[agenda.myTasks]]</h5>
+                        </div>
+                        {{/if}}
+
+
+
+                        <div class="summary-widget" data-tab="activity">
+                            <h5>[[agenda.activity]]</h5>
+                        </div>
+
+                    </div>
+                </div>
+                {{#if canCreateTask}}
+                <div id="agenda-tasks" class="agenda-tab showing">
+                    <div id="agenda-tasks-filter-title">[[agenda.showingEventsFor]] <span id="agenda-tasks-filter-date"></span><span class="close ti-close"></span></div>
+
+
+                    <div id="agenda-today">
+                        <h4>[[agenda.today]]</h4>
+                        <ul id="incomplete-tasks-list" class="today-tasks list condensed task-list {{#if todayHasTasks}}has-tasks{{/if}}" data-due-date="today">
+                            {{#each today}}
+                            <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id="{{id}}" data-date="{{formattedDate}}">
+
+                                <div class="status-indicators">
+
+                                    <div class="saving-indicator task-status-indicator"></div>
+                                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                </div>
+
+                                <div class="task-details">{{task}}</div>
+                                <div class="task-status"><span>{{statusText}}</span></div>
+                                <div class="task-assigned">
+                                    <span class="tag project-name">
+                                        <span>{{projectName}}</span>
+                                    </span>
+                                </div>
+                                <div class="task-due-date">{{dueDateHumanized}}</div>
+                            </li>
+                            {{/each}}
+
+                            <li class="no-tasks">- [[agenda.noTasks]] - </li>
+
+                        </ul>
+                    </div>
+                    <div id="agenda-upcoming">
+                        <h4>[[agenda.upcoming]] </h4>
+                        <ul id="incomplete-tasks-list" class="upcoming-tasks list condensed task-list {{#if upcomingHasTasks}}has-tasks{{/if}}" data-due-date="upcoming">
+                            {{#each upcoming}}
+                            <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id="{{id}}" data-date="{{formattedDate}}">
+
+                                <div class="status-indicators">
+
+                                    <div class="saving-indicator task-status-indicator"></div>
+                                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                </div>
+
+                                <div class="task-details">{{task}}</div>
+                                <div class="task-status"><span>{{statusText}}</span></div>
+                                <div class="task-assigned">
+                                    <span class="tag project-name">
+                                        <span>{{projectName}}</span>
+                                    </span>
+                                </div>
+                                <div class="task-due-date">{{dueDateHumanized}}</div>
+                            </li>
+                            {{/each}}
+
+                            <li class="no-tasks">- [[agenda.noTasks]] - </li>
+
+                        </ul>
+                    </div>
+                    <div id="agenda-other">
+                        <h4>[[agenda.other]]</h4>
+                        <ul id="incomplete-tasks-list" class="other-tasks list condensed task-list {{#if otherHasTasks}}has-tasks{{/if}}" data-due-date="other">
+                            {{#each other}}
+                            <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id="{{id}}" data-date="{{formattedDate}}">
+
+                                <div class="status-indicators">
+
+                                    <div class="saving-indicator task-status-indicator"></div>
+                                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                </div>
+
+                                <div class="task-details">{{task}}</div>
+                                <div class="task-status"><span>{{statusText}}</span></div>
+                                <div class="task-assigned">
+                                    <span class="tag project-name">
+                                        <span>{{projectName}}</span>
+                                    </span>
+                                </div>
+                                <div class="task-due-date">{{dueDateHumanized}}</div>
+                            </li>
+                            {{/each}}
+
+                            <li class="no-tasks">- [[agenda.noTasks]] - </li>
+
+                        </ul>
+                    </div>
+                    <div class="hide-overflow"></div>
+                </div>
+                {{/if}}
+
+                {{#if canCreateInvoice}}
+                <div id="agenda-billing" class="agenda-tab">
+                    {{#if hasOutstanding}}
+                    <h5 class="outstanding-summary"><img src="client/images/summary/Clock.svg" alt="">You have <strong>{{numOutstanding}} outstanding invoices</strong> with a total outstanding balance of <strong>{{outstandingTotal}}</strong></h5>
+                    {{/if}}
+
+                    {{#if hasOverdue}}
+                    <h5 class="overdue-summary"><img src="client/images/summary/Attention.svg" alt=""> You have <strong>{{numOverdue}} overdue invoices</strong> with a total overdue balance of <strong>{{overdueTotal}}</strong></h5>
+                    {{/if}}
+
+                    {{#if hasDrafts}}
+                    <h5 class="draft-summary"><img src="client/images/summary/Document.svg" alt=""> You have <strong>{{numDrafts}} draft invoices</strong> that haven't been sent</h5>
+                    {{/if}}
+
+                    <div id="billing-activity" class="activity-stream">
+
+                    </div>
+                </div>
+                {{/if}}
+
+
+                <div id="agenda-activity" class="agenda-tab">
+                    <div id="agenda-activity-list" class="activity-stream"></div>
+                </div>
+            </div>
+
+            <div id="agenda-sidebar">
+                <div class="dashboard-calendar">
+
+
+                    <div id="calendar-inner"></div>
+
+                </div>
+                <div class="open-projects">
+                    <h4>Your Boards</h4>
+                    <ul>
+                        {{#each projects.models}}
+                        <li class="{{statusText}}" data-id="{{id}}">
+                            <div class="project-name">{{name}}</div>
+
+                            <div class="project-due-date">{{formattedDueDate}}</div>
+                            <div class="project-client">{{clientName}}</div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="template-sidebar">
+
+        <div id="sidebar-wrapper">
+
+            <div class="menu-icon">
+                <img src="client/images/menu.svg" alt="">
+            </div>
+
+            <div id="sidebar-menu">
+                <ul id="sidebar-menu-items">
+                    <li id="dashboard-tab"><span class="sidebar-icon ti-home "></span><a
+                            href="#dashboard"><span>Dashboard</span></a></li>
+                    <li id="templates-tab"><span class="sidebar-icon ti-folder"></span><a href="#templates"><span>Templates</span></a>
+                            </li>
+                            <li id="settings-tab"><span class="sidebar-icon ti-settings"></span>
+                                <a href="#settings"><span>Settings</span></a>
+                            </li>
+                    <li id="profile-tab"><span class="sidebar-icon ti-folder"></span><a href="#profile"><span>Profile</span></a>
+                    </li>
+
+                    <li id="help-tab"><span class="sidebar-icon ti-folder"></span><a href="#help"><span>Help</span></a>
+                    </li>
+                </ul>
+
+
+            </div>
+
+            <ul id="projects-list">
+                {{#projects}}
+               <li><a href="#boards/{{id}}">{{name}}</a></li>
+                {{/projects}}
+            </ul>
+
+            <div id="running-timer-space"></div>
+            <div id="footer-space">
+
+                <!--<a href="#settings" title="Settings"><span class="icon-settings"></span></a>-->
+                <!--<a href="#logout" title="Logout"><span class="icon-switch"></span></a>-->
+            </div>
+        </div>
+    </div>
+
+<div id="template-form-help">
+        <div id="get-help">
+            <div id="choose-help-type">
+                <div class="support-center">
+                    <img src="client/images/docs.gif" alt="">
+                    <h5 class="title">Support Center</h5>
+                    <p>Have a general question that's not answered in our Articles? We will get back to you asap.</p>
+                    <a class="button" href="https://duetapp.com/support" target="_blank">Get Support</a>
+                </div>
+                <div class="send-email">
+                    <img src="client/images/mail.gif" alt="">
+                    <h5 class="title">Contact Us</h5>
+                    <p>Have a general question that's not answered in our Articles? We will get back to you asap.</p>
+                    <div id="contact-us-button" class="button">Contact Us</div>
+                </div>
+            </div>
+            <div id="support-message">
+
+                <form action="#" method="post" data-model="helpContact" novalidate>
+                    <p>Send us a message to get help</p>
+                    <div class="field">
+                        <label for="" class="large">Please describe your question or issue. Please provide as much information as possible
+                            and you will receive a response as quickly as possible.</label>
+
+                        <textarea placeholder="Type your question here" name="message" required="required"></textarea>
+
+                    </div>
+                   <input class="button large" type="submit" value="Send">
+                </form>
+            </div>
+            <div id="contact-sent">
+                <h4>Message Sent</h4>
+                <p>Your message has been sent and response will be sent to your email <span class="user-email">{{email}}</span> as soon as possible</p>
+            </div>
+            <div id="contact-error">
+                <h4>Something went wrong</h4>
+                <p>We were unable to send your message. Please send your message directly to duet@23andwalnut.com</p>
+                <div class="user-message"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="template-finish-setup">
+        <div id="finish-setup">
+            <h4 class="title">Next steps</h4>
+            <ul>
+                <li>
+                    <h4><span>1</span>Make sure you set up emails</h4>
+
+                    <p>The default configuration uses php's built in mail() function. This
+                    works fine on some hosts, but many block this funtion, which means the Duet
+                    won't be able to send any email. Email's are a critical component of Duet's
+                    functionality so it's highly recommended that you turn on SMTP for outgoing
+                    emails. </p>
+
+
+                        <p>Most server's have built in SMTP capabilities. You can get the correct
+                            settings from Cpanel or directly from your host.</p>
+
+                        <p>Here's more about setting up outgoing email</p>
+
+
+                </li>
+                <li>
+                    <h4><span>2</span>Setup Payments if you plan to send invoices</h4>
+                    <p>Invoices work out of the box, but if you want your clients to be able to pay
+                    you, you will need to setup payments.</p>
+
+
+                    <p>Here's an article that tells you more about setting up payments</p>
+
+                    <p>Don't forget to turn off test mode when you're ready to start accepting real money! :)</p>
+
+                </li>
+                <li>
+                    <h4><span>3</span>Decide if you want to reply to messages directly from email</h4>
+
+                    <p>If so, than you will need to set up incoming email. This is 100% separate from the
+                        email setup you did above, and is slightly more complicated to setup. The easiest path
+                        is to create a free gmail address that will only be used for Duet</p>
+
+
+                        <p>You can read more about incoming email setup here: </p>
+
+                </li>
+                <li>
+                    <h4><span>4</span>Setup recurring invoices and other scheduled tasks
+                    </h4>
+
+                    <p>If you're using recurring invoicing or would like to reply to messages directly from your
+                        email, you will need to set up scheduled tasks</p>
+
+
+                        <p>You can read about scheduled tasks here</p>
+
+                </li>
+            </ul>
+
+            <a class="button large" href="https://duetapp.com/docs/installation/finish-setup" target="_blank" >Ok, show me how to finish these steps</a>
+        </div>
+    </div>
+
+
+    <div id="template-form-user-edit">
+        <form id="edit-user" action="#" method="post" data-model="user" novalidate>
+
+            <div class="field">
+                <label for="">[[clientDetails.firstName]]</label>
+                <input type="text" required="required" name="first_name">
+
+            </div>
+
+            <div class="field">
+                <label for="">[[clientDetails.lastName]]</label>
+                <input type="text" required="required" name="last_name">
+
+            </div>
+
+            <div class="field">
+                <label for="">[[clientDetails.emailAddress]]</label>
+                <input type="text" required="required" name="email">
+            </div>
+
+            <span id="show-form-details" class="button tiny flat">[[clientDetails.addAdditionalDetails]]</span>
+            <span id="hide-form-details" class="button tiny flat">[[clientDetails.hideAdditionalDetails]]</span>
+
+            <div id="form-more">
+                <div class="field">
+                    <label for="">[[clientDetails.address1]]</label>
+                    <input type="text" name="address1">
+                </div>
+
+                <div class="field">
+                    <label for="">[[clientDetails.address2]]</label>
+                    <input type="text" name="address2">
+                </div>
+
+                <div class="field">
+                    <label for="">[[clientDetails.phone]]</label>
+                    <input type="text" name="phone">
+                </div>
+            </div>
+
+            <input type="submit" value="[[form.submit]]">
+        </form>
+    </div>
+
+
+    <div id="template-user-details">
+        <div class="user-details">
+            <div class="">
+                <div class="user-image">
+                    <div class="user-image-inner"></div>
+
+                </div>
+                <div class="user-contact-info">
+
+                    {{#isClient}}
+                    <h6>[[userDetails.organization]]</h6>
+
+
+                    <a href="#clients/{{clientId}}">{{clientName}}</a>
+
+                    {{/isClient}}
+
+
+                    <br>
+                    <h4 class="role">{{name}} ({{role}})</h4>
+
+
+
+
+                    <ul class="item-details-list">
+                        <li class="email-details">
+                            <div class="icon ti-email"></div>
+                            {{email}}
+                        </li>
+                        <li class="address-details">
+                            <div class="icon ti-id-badge"></div>
+                            <div class="address">{{address1}}<br/>{{address2}}</div>
+                        </li>
+                        <li class="phone-details">
+                            <div class="icon ti-microphone"></div>
+                            {{phone}}
+                        </li>
+
+
+                    </ul>
+
+                    <div class="user-actions entity-actions">
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="item-notes user-notes">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="template-login">
+        <div id="login-screen">
+
+
+            <div id="login-form">
+                <div id="form-overlay"></div>
+                <div class="form-content">
+                    <h2 class="login-title">Solo.</h2>
+                    <h5 class="login-subtitle">Sign In</h5>
+
+                    <div class="login-window">
+
+
+                        <p>[[loginForm.instructions]]</p>
+
+                        <div id="login-status">{{message}}</div>
+                        <form method="post">
+
+                            <div class="login-fields">
+                                <div>
+                                    <input type="text" name="username" id="username" placeholder="[[loginForm.emailPlaceholder]]">
+                                    <label class="icon ti-user" for="username"></label>
+                                </div>
+
+                                <div class="password-field">
+                                    <input type="password" name="password" id="password" placeholder="[[loginForm.passwordPlaceholder]]">
+                                    <label class="icon ti-lock" for="password"></label>
+                                </div>
+                            </div>
+
+
+
+                            <button type="submit">
+                                [[loginForm.login]]
+                                <span class="ti-angle-right"></span>
+                            </button>
+
+                            <a href="#forgot_password" class="forgot-password">[[loginForm.forgotPassword]]</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login-footer">
+                <a href="http://getsoloapp.com" target="_blank">Powered by Solo</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="template-page-progress">
+        <div id="top-progress-bar">
+            <div class="bar" role="bar">
+                <div class="peg"></div>
+            </div>
+            <div class="spinner" role="spinner">
+                <div class="spinner-icon"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="template-base-layout">
+        <div id="app-wrapper">
+            <div id="page-progress-wrapper">
+
+            </div>
+            <div id="notification-space">
+
+            </div>
+            <div id="sidebar">
+
+            </div>
+            <div id="slide-out-panel-wrapper"></div>
+
+            <div class="window-outer">
+                <div class="window messages-closed"></div>
+            </div>
+
+
+            <div id="mobile-overlay"></div>
+
+            <div id="bottom-navigation-wrapper"></div>
+        </div>
+    </div>
+
+
+    <div id="template-current-user">
+        <div id="current-user" class="header-button">
+            <div class="user-image-wrapper"><span class="user-image"></span></div>
+
+            <div class="user-meta">
+                <div class="user-name">{{userName}}</div>
+                <div class="user-role">&nbsp;({{userRole}})</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="template-global-search-input">
+        <div id="global-search-wrapper"><input id="global-search" type="text" value="" name="q" class="text"
+                                               placeholder="search"></div>
+    </div>
+
+
+    <div id="template-slide-out-panel">
+        <div class="slide-out-panel">
+
+        </div>
+    </div>
+
+
+
+
+    <div id="template-modal">
+        <div class="modal-overlay">
+            <div class="modal">
+                <div class="modal-info">
+                    <h3>{{title}}</h3>
+
+                    <div class="close ti-close"></div>
+                </div>
+                {{content}}
+            </div>
+        </div>
+    </div>
+
+    <div id="template-form-project">
+        <form id="project-form" action="#" method="post" data-model="project" novalidate>
+            <div class="field">
+                <label for="">[[projectForm.name]]</label>
+                <input type="text" required="required" name="name">
+
+            </div>
+
+            <div class="field">
+                <label for="">Description</label>
+                <textarea type="text" name="description"></textarea>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    <div id="template-form-project-task">
+        <form id="new-task-form" action="#" method="post" data-model="task" novalidate>
+            <div class="field">
+                <label for="">[[taskForm.task]]</label>
+                <textarea rows=3 cols=20 name="task"></textarea>
+            </div>
+
+
+
+            <div class="field  notes-wrapper">
+                <label for="">[[taskForm.notes]]</label>
+                <textarea rows=3 cols=20 name="notes"></textarea>
+            </div>
+
+            <div class="field">
+                <label>[[taskForm.assignedTo]]</label>
+                <select name="assigned_to" data-placeholder="[[taskForm.assignedTo]]">
+                    <option></option>
+                </select>
+            </div>
+
+
+            <div class="field">
+                <label for="">[[taskForm.dueDate]]</label>
+                <input type="date" name="due_date_selection"/>
+            </div>
+
+            <input type="hidden" name="due_date"/>
+            <input type="hidden" name="project_id"/>
+
+            <input type="submit" value="[[form.submit]]">
+        </form>
+    </div>
+
+    <div id="template-form-task-weight">
+        <form id="task-weight-form" action="#" method="post" data-model="task" novalidate>
+            <div class="notification">[[taskWeightForm.pleaseWait]]</div>
+
+            <p>[[taskWeightForm.enterValue]] <span class="task-maximum-weight"><span
+                    class="loading-maximum-weight"></span></span>[[taskWeightForm.calculatedAutomatically]]</p>
+
+            <div class="field">
+                <label for="">[[taskWeightForm.taskWeight]]</label>
+                <input class="task-weight" type="text" name="weight" placeholder="Auto"/>
+            </div>
+
+            <div class="submit-button">
+                <input value="[[form.submit]]" class="button medium blue" type="submit">
+            </div>
+        </form>
+    </div>
+
+    <div id="template-form-project-file">
+        <form method="post" data-model="file" novalidate action="#">
+
+            <div id="progress-wrapper"></div>
+
+            <!--<div id="select-files" class="field">-->
+            <!--<input id="fileupload" type="file" name="files[]" multiple>-->
+            <!--</div>-->
+
+            <a id="cancel-all" class="button red submit" href="#">[[projectFileForm.cancel]]</a>
+        </form>
+
+    </div>
+
+    <div id="template-file-progress">
+        <div class="progress-bar-wrapper" data-file="{{fileName}}" data-id="{{id}}">
+            <div class="clearfix">
+                <div class="filename">{{fileName}}</div>
+                <a href="#" class="cancel">[[fileProgress.cancel]]</a>
+
+                <div class="status">[[fileProgress.status]]</div>
+            </div>
+            <div class="progress"><span class="orange" style="width: 0%;"><span>0%</span></span></div>
+
+        </div>
+    </div>
+
+    <div id="template-add-project-list-item">
+        <div id="{{buttonId}}" class="button clear-button add-list-item {{type}}"
+             title="[[addProjectListItem.title]] {{buttonText}}">
+            <div class="icon ti-plus add-item"></div>
+            {{buttonText}}
+        </div>
+    </div>
+
+    <div id="template-edit-notes-button">
+        <div id="{{buttonId}}" class="button clear-button new-entity edit-notes {{type}}" title="{{buttonText}}">
+            <div class="icon ti-pencil edit-notes"></div>
+            {{buttonText}}
+        </div>
+    </div>
+
+
+    <div id="template-add-file-button">
+        <div id="{{buttonId}}" class="button clear-button add-file-button {{type}}" title="Add New {{buttonText}}">
+            {{#if showIcon}}
+            <div class="icon ti-plus add-item"></div>
+            {{/if}}
+            {{buttonText}}
+            <input id="fileupload" type="file" name="files[]" multiple>
+        </div>
+    </div>
+
+
+    <div id="template-task-add-file-button">
+        <div id="{{buttonId}}" class="button small add-file-button {{type}}" title="[[addFileButton.title]] {{buttonText}}">
+            {{buttonText}}
+            <input id="fileupload" type="file" name="files[]" multiple>
+        </div>
+    </div>
+
+
+    <div id="template-calendar">
+        <div id="calendar-outer">
+            <div id="calendar"></div>
+        </div>
+    </div>
+
+    <div id="template-calendar-header">
+        <div id="calendar-header">
+
+            {{#userIsAdmin}}
+            <!--<div class="filter-dropdown">-->
+            <!--<div class="filter-button">[[calendarHeader.filter]]<span class="caret caret-down"></span></div>-->
+
+            <!--<ul class="dropdown-menu pull-right">-->
+            <!--<li id="filter-my-tasks"><span>[[calendarHeader.myTasks]]</span></li>-->
+            <!--<li id="filter-all-tasks" class="selected"><span>[[calendarHeader.allTasks]]</span></li>-->
+
+            <!--</ul>-->
+            <!--</div>-->
+            {{/userIsAdmin}}
+
+            <div id="calendar-menu">
+                <div class="date-name">{{month}}</div>
+                <ul id="calendar-controls" class="solid-button-set">
+                    <li class="prev-date">&#9668;</li>
+                    <li class="today-date">[[calendarHeader.today]]</li>
+                    <li class="next-date">&#9658;</li>
+                </ul>
+                <select id="calendar-view-selector" class="beveled-dropdown">
+                    <option value="month">[[calendarHeader.month]]</option>
+                    <option value="basicWeek">[[calendarHeader.week]]</option>
+                    <option value="basicDay">[[calendarHeader.day]]</option>
+                </select>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="template-calendar-event-item">
+        <div class="calendar-event-item {{statusClass}}">
+            <div class="task-status"></div>
+            <div class="task-name">{{title}}</div>
+        </div>
+    </div>
+
+    <div id="template-calendar-item-popup">
+        <div class="calendar-item-popup">
+            <h5 class="popup-title">{{title}}</h5>
+            <span class="close vector-icon clickable">x</span>
+
+            <p>{{description}}</p>
+            <a href="{{url}}">[[calendarItemPopup.goToTask]]</a>
+        </div>
+    </div>
+
+    <div id="template-confirm-box">
+        <div id="confirm-box" class="{{class}}">
+            <h3 class="message">{{message}}</h3>
+
+            <div class="confirmation-buttons">
+                <button class="button  red action">{{action}}</button>
+                <button class="button  secondary cancel">Cancel</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="template-alert">
+        <div class="modal-overlay">
+            <div class="modal alert">
+                <div class="alert">
+                    <p class="message">
+                        {{#messages}}
+                        {{message}}<br/><br/>
+                        {{/messages}}
+                    </p>
+                    <button class="button small secondary cancel">[[alert.ok]]</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="template-error">
+        <div class="notification error closeable">
+            {{message}}
+            <a href="#" class="close"></a>
+        </div>
+    </div>
+
+    <div id="template-notice">
+        <div class="notification notice closeable">
+            {{message}}
+            <a href="#" class="close"></a>
+        </div>
+    </div>
+
+    <div id="template-notification">
+        <div class="notification notice closeable">
+            <div class="notification-inner">{{message}}</div>
+            <span class="close" title="close"></span>
+        </div>
+    </div>
+
+
+    <div id="template-project-details">
+        <div id="project-details" class="{{project.status_text}}">
+
+            <div id="top-details" class="{{#hasDueDate}}has-due-date{{/hasDueDate}}">
+
+                {{#hasDueDate}}
+                <div>
+                    <h5>[[projectDetails.dueDate]]</h5>
+                    <h3>{{formattedDueDate}}</h3>
+                </div>
+                {{/hasDueDate}}
+
+
+                <div>
+                    <h5>[[projectDetails.status]] <span class="status-indicator {{project.status_text}}"></span></h5>
+
+                    <h3 class="{{project.status_text}}">{{formattedStatusText}}<span> ({{projectProgress}})</span>
+                    </h3>
+                </div>
+
+
+                <div>
+                    <h5>[[projectDetails.totalTime]]</h5>
+                    <h3>{{formattedTotalTime}}</h3>
+                </div>
+
+                <div>
+                    <h5>[[projectDetails.invoiceStatsBilled]]</h5>
+                    <h3>{{formattedTotalBilled}}</h3>
+                </div>
+
+                <div>
+                    <h5>[[projectDetails.invoiceStatsOutstanding]]</h5>
+                    <h3>{{formattedTotalOutstanding}}</h3>
+                </div>
+
+                <div>
+                    <h5>[[projectDetails.openTasks]]</h5>
+                    <h3>{{taskCounts.incomplete}}</h3>
+                </div>
+            </div>
+
+
+            <div id="main-dashboard">
+                <div id="activity-stream-space" class="unfloat-on-mobile">
+                    <h5 class="section-title">[[projectDetails.projectActivity]]</h5>
+
+                    <div class="activity-stream">
+
+                    </div>
+                </div>
+
+                {{#isRegularProject}}
+                <div class="project-stats unfloat-on-mobile">
+
+                    {{#userIsAdmin}}
+
+                    <h5 class="section-title">[[projectDetails.client]]</h5>
+
+                    <p><span class="icon ti-user"></span><a
+                            href="#clients/{{project.client_id}}">{{project.client_name}}</a></p>
+                    {{/userIsAdmin}}
+
+
+                    <div class="people-section">
+                        <h5 class="section-title">[[projectDetails.people]]</h5>
+
+                        <div class="people-list">
+                            <ul class="">
+                                {{#people.agents}}
+                                <li class="person-info" data-id={{id}}>
+                                    <a href="#users/{{id}}">
+                                        <span class="person-image user-image"></span>
+                                <span class="person-meta">
+                                    <span class="person-name">{{first_name}} {{last_name}}</span>
+                                    <span class="person-role">{{role}}</span>
+                                </span>
+                                    </a>
+                                </li>
+                                {{/people.agents}}
+
+                                {{#people.clients}}
+                                <li class="person-info" data-id={{id}}>
+                                    <a href="#users/{{id}}">
+                                        <span class="person-image user-image"></span>
+                                <span class="person-meta">
+                                    <span class="person-name">{{first_name}} {{last_name}}</span>
+                                    <span class="person-role">{{role}}</span>
+                                </span>
+                                    </a>
+                                </li>
+                                {{/people.clients}}
+
+
+                                {{#people.admins}}
+                                <li class="person-info" data-id={{id}}>
+                                    <a href="#users/{{id}}">
+                                        <span class="person-image user-image"></span>
+                                <span class="person-meta">
+                                    <span class="person-name">{{first_name}} {{last_name}}</span>
+                                    <span class="person-role">{{role}}</span>
+                                </span>
+                                    </a>
+                                </li>
+                                {{/people.admins}}
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+                {{/isRegularProject}}
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="template-activity-list">
+        <div class="activity-stream-wrapper">
+            <ul class="activity-stream-list">
+                {{#activityItems}}
+                <li class="activity-{{objectType}} activity-{{actionTaken}} hidden" data-id="{{id}}">
+
+                    <div class="activity-meta">
+
+                        <div class="marker"></div>
+
+                        <div class="icons">
+                            <div class="type-icon"><span class="ti-{{iconName}}"></span></div>
+                            <a href="#{{#isUserGenerated}}users/{{userId}}{{/isUserGenerated}}"
+                               class="user-image"></a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-content">
+
+                <span class="activity-description">
+                    {{#isUserGenerated}}<a href="#users/{{userId}}" class="activity-user">{{userName}}</a>
+                    {{/isUserGenerated}}{{actionTaken}} {{article}}
+                    {{objectTypeText}}
+
+
+                    {{#hasLinkedObject}}
+                    [[activity.on]] {{linkedArticle}} {{linkedObjectTypeText}}
+                    (<span class="linked-activity-title"><a href="{{linkedObjectLink}}"
+                                                            class="linked-object-link">{{linkedObjectTitle}}</a></span>)
+                    {{/hasLinkedObject}}
+                </span>
+
+
+                        <span class="activity-timestamp" title="{{dateText}}">{{formattedDate}}</span>
+
+                        <div class="activity-title">
+                            {{! We're using triple brackets for the object title because it may contain html and since
+                            it's generated by the server, we can trust it}}
+                            <a href="{{objectLink}}" class="object-link">{{{objectTitle}}}</a>
+                            <span class="object-link deleted-object">{{objectTitle}}</span>
+                        </div>
+                    </div>
+                </li>
+                {{/activityItems}}
+            </ul>
+
+            <div class="activity-show-all">[[activityList.showAll]]</div>
+        </div>
+
+    </div>
+
+
+    <div id="template-task-filter">
+
+        <div class="task-filter filter-dropdown">
+            <div class="filter-button"><span class="ti-angle-down"></span>[[taskFilter.filter]]</div>
+
+            <ul class="dropdown-menu pull-right">
+                <li data-filter-type="complete" data-filter-value="incomplete"><span>[[taskFilter.incomplete]]</span></li>
+                <li data-filter-type="complete" data-filter-value="complete"><span>[[taskFilter.complete]]</span></li>
+                <li data-filter-type="complete" data-filter-value="all"><span>[[taskFilter.all]]</span></li>
+
+
+                <li class="divider"></li>
+                <li class="search-filter" data-filter-type="search">
+                    <input type="text" placeholder="[[taskFilter.search]]"/>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div id="template-project-notes">
+        <div id="project-notes" class="project-notes">
+            <div id="notes-content"></div>
+            <div id="no-notes" class="no-activity">[[projectNotes.noNotes]]</div>
+        </div>
+    </div>
+
+    <div id="template-search-results-filter">
+        <div id="search-filters">
+            <div class="search-filter filter-dropdown">
+                <div class="filter-button"><span class="ti-angle-down"></span> [[globalSearch.filter]]</div>
+
+                <ul class="dropdown-menu pull-right">
+                    <li data-filter-value="all"><span>[[globalSearch.all]]</span></li>
+                    <li data-filter-value="project"><span>[[globalSearch.projects]]</span></li>
+                    <li data-filter-value="task"><span>[[globalSearch.tasks]]</span></li>
+
+                    <li data-filter-value="file"><span>[[globalSearch.files]]</span></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="template-global-search">
+
+            <div id="global-search-page">
+
+                <div id="search-box-wrapper">
+
+
+
+
+                        <input id="search-box" type="text" name="q" placeholder="Enter search terms">
+
+
+
+                    <hr>
+                </div>
+
+            <div class="search-entities">
+                {{#hasProjects}}
+                <div id="search-project-results" class="search-entity">
+                    <h6>[[globalSearch.projectsTitle]]</h6>
+
+                    <div class="list condensed project-list">
+                        <div class="list-main-header">
+                            <div class="project-name">[[globalSearch.projectName]]</div>
+                            <div class="project-due-date">[[globalSearch.projectDueDate]]</div>
+                            <div class="project-status">[[globalSearch.projectStatus]]</div>
+                        </div>
+                        <ul class="list condensed">
+                            {{#projects}}
+                            <li class="{{statusText}}" data-type="{{type}}" data-id={{id}}>
+                                <div class="project-name">{{name}}</div>
+                                <div class="project-due-date">{{formattedDueDate}}</div>
+                                <div class="project-status">{{formattedStatusText}}</div>
+                            </li>
+                            {{/projects}}
+                        </ul>
+
+                    </div>
+                </div>
+                {{/hasProjects}}
+
+                {{#hasTasks}}
+                <div id="search-task-results" class="search-entity">
+                    <h6>[[globalSearch.tasksTitle]]</h6>
+
+                    <div class="list condensed search-task-list">
+                        <div class="list-main-header">
+                            <div class="task-name">[[globalSearch.taskName]]</div>
+                            <div class="task-project-name">[[globalSearch.taskProject]]</div>
+                            <div class="task-due-date">[[globalSearch.taskDueDate]]</div>
+                            <div class="task-status">[[globalSearch.taskStatus]]</div>
+                        </div>
+                        <ul class="list condensed">
+                            {{#tasks}}
+                            <li class="{{statusText}}" data-type="{{type}}" data-id={{id}}>
+
+                                <div class="task-name">{{task}}</div>
+                                <div class="task-project-name">{{projectName}}</div>
+                                <div class="task-due-date">{{dueDateHumanized}}</div>
+                                <div class="task-status">{{formattedStatusText}}</div>
+
+                            </li>
+                            {{/tasks}}
+                        </ul>
+
+                    </div>
+                </div>
+                {{/hasTasks}}
+
+
+
+
+
+                {{#hasFiles}}
+                <div id="search-files-results" class="search-entity">
+                    <h6>[[globalSearch.filesTitle]]</h6>
+
+                    <div class="list condensed file-list">
+                        <div class="list-main-header">
+                            <div class="file-name">[[globalSearch.fileName]]</div>
+                            <div class="file-type">[[globalSearch.fileType]]</div>
+                            <div class="file-project-name">[[globalSearch.fileProject]]</div>
+                        </div>
+                        <ul class="list condensed">
+                            {{#files}}
+                            <li class="{{statusText}}" data-type="{{type}}" data-id={{id}}>
+                                <div class="file-name">{{name}}</div>
+                                <div class="file-type">{{fileType}}</div>
+                                <div class="file-project-name">{{projectName}}</div>
+                            </li>
+                            {{/files}}
+                        </ul>
+                    </div>
+                </div>
+                {{/hasFiles}}
+
+
+
+
+
+                <div id="no-results-wrapper"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="template-no-search-results">
+        <p class="no-search-results">[[globalSearchNoResults.noMatching]]
+            {{type}}[[globalSearchNoResults.pluralizeType]]</p>
+    </div>
+
+    <div id="template-form-forgot-password">
+        <div id="forgot-password">
+            <form action="#" method="post" data-model="forgotPassword">
+                <h4>[[forgotPassword.forgotPassword]]</h4>
+
+                <p>[[forgotPassword.instructions]]</p>
+
+                <div class="field">
+                    <input name="email" type="text" required="required"/>
+                </div>
+
+                <input type="submit" class="blue" value="[[form.submit]]">
+            </form>
+            <div id="temp-password-message">
+                [[forgotPassword.checkEmail]]
+            </div>
+
+        </div>
+    </div>
+
+    <div id="template-form-change-password">
+        <form id="change-password" action="#" method="post" data-model="changePassword">
+            <div class="field">
+                <label for="">[[changePassword.currentPassword]]</label>
+                <input type="password" name="current_password" required="required">
+            </div>
+            <div class="field">
+                <label for="">[[changePassword.newPassword]]</label>
+                <input type="password" name="new_password" required="required">
+            </div>
+            <div class="field">
+                <label for="">[[changePassword.confirmNewPassword]]</label>
+                <input type="password" name="new_password_confirm" required="required">
+            </div>
+
+            <input type="submit" value="[[form.submit]]">
+
+        </form>
+    </div>
+
+    <div id="template-form-send-password">
+        <form id="sedn-password" action="#" method="post" data-model="sendPassword">
+
+            <p>[[sendPassword.instructions]]</p>
+
+            <input type="hidden" name="id" value="{{userId}}">
+
+            <input type="submit" class="small" value="[[sendPassword.submit]]">
+
+            <div class="button large">[[sendPassword.cancel]]</div>
+
+        </form>
+    </div>
+
+
+    <div id="template-settings-menu">
+        <ul class="link-menu">
+            <li class="general-tab"><a href="#admin-settings-overview">Overview</a></li>
+            <li><a href="#admin-general">General</a></li>
+            <li><a href="#scheduled-tasks">Scheduled Tasks</a></li>
+            <li><a href="#admin-feedback">Referrals</a></li>
+        </ul>
+    </div>
+
+    <div id="template-admin-settings">
+        <div id="admin-settings">
+
+
+            <div id="admin-settings-overview" class="admin-section active">
+
+
+                <div id="settings-overview" class="settings-section">
+                    <h4>[[adminSettings.settingsOverview]]</h4><br>
+                    {{#settings}}
+                    <h4 class="setting-section-header">{{section_name}}</h4>
+                    <ul class="setting-section-values">
+                        {{#values}}
+                        <li data-setting="{{name}}" data-value="{{value}}" data-description="{{description}}"
+                            data-info="{{info}}" data-type="{{type}}">
+                            <span><strong>{{description}}: </strong></span>{{value}}
+                            <span class="edit-setting">Edit</span></li>
+                        {{/values}}
+                    </ul>
+                    {{/settings}}
+                </div>
+
+            </div>
+
+            <div id="scheduled-tasks" class="admin-section">
+
+                <div class="settings-section">
+                    <h4>[[adminSettings.scheduledTasks]]</h4>
+                    <p>Create cron jobs for the following</p>
+
+                    <h5>[[adminSettings.frequently]]</h5>
+                    {{scheduledTasks.frequently}}
+
+                    <h5>[[adminSettings.daily]]</h5>
+                    {{scheduledTasks.daily}}
+                </div>
+
+            </div>
+
+            <div id="admin-general" class="admin-section">
+
+
+
+
+                <div class="settings-section">
+                    <h4>[[adminSettings.templatesSection]]</h4>
+
+                    <p>[[adminSettings.templatesSectionInstructions]]</p>
+
+                    <div id="build-language-button" class="button">[[adminSettings.buildTemplateFile]]</div>
+
+
+                    <div id="more-button-wrapper">
+                        <button id="show-more-tasks" class="link">[[adminSettings.more]]</button>
+                    </div>
+
+                    <div id="more-tasks">
+                        <hr>
+                        <h4>[[adminSettings.cleanMessagesSection]]</h4>
+
+                        <p>[[adminSettings.cleanMessagesInstructions]]</p>
+
+                        <div id="clean-messages" class="button">[[adminSettings.cleanMessages]]</div>
+
+                        <hr>
+                        <h4>[[adminSettings.stripSpecialCharsSection]]</h4>
+
+                        <p>[[adminSettings.stripSpecialCharsInstructions]]</p>
+
+                        <div id="strip-messages" class="button">[[adminSettings.stripMessages]]</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div id="admin-feedback" class="admin-section">
+                <div>
+                    <h4>[[adminSettings.referrals]]</h4>
+
+                    <p> Do you know one or two small business owners that would benefit from affordable project management
+                        software? If so, send them a quick referral!
+
+                    <form action="#" id="referral-form" method="post">
+                        <div class="field">
+                            <label>Email</label>
+                            <input class="form-control" type="email" name="email" required="required"/>
+                        </div>
+
+                        <div class="field">
+                            <label>Subject</label>
+                            <input class="form-control" type="text" name="subject"
+                                   value="Check out this great project management app" required="required"/>
+                        </div>
+
+                        <div class="field">
+                            <label>Message</label>
+                        <textarea class="form-control" name="message" id="" cols="30" rows="10" required="required">
+
+                        </textarea>
+
+                            <div id="referral-disclaimer">A copy of each referral will be sent through duetapp.com's
+                                servers
+                                for analytics purposes.
+                            </div>
+                        </div>
+                        <input value="Send" type="submit">
+                    </form>
+
+
+                    <div id="social-shares">
+                        <p>Share on social media</p>
+
+                        <div class="share-option">
+                            <a id="twitter-button" target="_blank"
+                               href="https://twitter.com/intent/tweet?text=Duet+-+A+great+project+management+app+for+small+businesses+http%3a%2f%2fduetapp.com&via=23andwalnut"><span
+                                    class="share-icon ti-twitter"></span>Tweet</a>
+                        </div>
+
+                        <div class="share-option">
+                            <a id="facebook-button" target="_blank"
+                               href="http://www.facebook.com/share.php?u=https://duetapp.com&t=Duet+-+A+great+project+management+app+for+small+businesses+http%3a%2f%2fduetapp.com%20@23andWalnut&v=4"><span
+                                    class="share-icon ti-facebook"></span>Share on Facebook</a>
+                        </div>
+
+                        <div class="share-option">
+                            <a id="linkedin-button" target="_blank"
+                               href="http://www.linkedin.com/shareArticle?mini=true&url=https://duetapp.com&title=Duet+-+A+great+project+management+app+for+small+businesses+http%3a%2f%2fduetapp.com&summary=A+beautiful+self+hosted+project+management+app+with+a+low+one+time+fee&source=https://duetapp.com"><span
+                                    class="share-icon ti-linkedin"></span>Share on LinkedIn</a>
+                        </div>
+
+
+                        <div class="share-option">
+                            <a id="google-button" target="_blank"
+                               href="https://plus.google.com/share?url=http%3a%2f%2fduetapp.com"><span
+                                    class="share-icon ti-google"></span>Share on Google+</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <hr>
+
+
+                <div>
+                    <h4>Feedback</h4>
+
+                    <p>Do you have suggestions on how to improve Duet? I would love to hear from you.</p>
+
+                    <form id="feedback-form" action="#">
+                        <div class="field"><textarea class="form-control" name="message" required="required" id=""
+                                                     cols="30"
+                                                     rows="10"></textarea></div>
+                        <input value="Send" type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+<div id="template-form-change-setting">
+    <form id="change-setting">
+        <p><strong>{{description}}</strong></p>
+        {{#if hasInfo}}
+        <p class="setting-info">{{info}}</p>
+        {{/if}}
+        {{#isBoolean}}
+        <label for="" class="radio">
+            <input type="radio" name="value" value="1"> Yes
+        </label>
+        <label for="" class="radio">
+            <input type="radio" name="value" value="0"> No
+        </label>
+        {{/isBoolean}}
+
+        {{#if isString}}
+        <input type="text" name="value">
+        {{/if}}
+
+        {{#if isNumber}}
+        <input type="number" name="value">
+        {{/if}}
+
+        <input type="submit" value="[[adminSettings.changeSetting]]">
+    </form>
+</div>
+
+<span id="template-referral-text"><span>Hey,
+
+I've been using Duet Project Management and loving it. It's an awesome project management
+app for small businesses and it is very affordable.
+
+I thought you might like their service too so I'm sending you this link. http://duetapp.com
+
+Check it out!
+</span></span>
+
+<div id="template-delete-invoice">
+    <div id="delete-invoice-form" class="form">
+        <p>[[deleteInvoice.instructions]]</p>
+
+        <div class="field">
+            <label>[[deleteInvoice.fieldLabel]]</label>
+            <input name="invoice_number" type="text">
+        </div>
+        <div class="button submit red">[[deleteInvoice.button]]</div>
+    </div>
+</div>
+
+<div id="template-panel-loading">
+    <div class="panel-loading">
+        <h4 class="loading-texts">[[panelLoading.loading]]</h4>
+    </div>
+</div>
+
+<div id="template-panel-no-selection">
+    <div class="panel-no-selection">
+        <p class="loading-texts">[[panelNoSelection.makeSelection]]</p>
+    </div>
+</div>
+
+
+
+
+<div id="template-running-timer">
+    <div class="running-timer">
+        <div class="running-timer-inner">
+            <div class="timer-task">{{task}}</div>
+            <div class="timer-elapsed"></div>
+            <div class="timer-stop"></div>
+        </div>
+    </div>
+</div>
+
+
+<div id="template-form-new-project-from-template">
+    <div id="new-project-from-template">
+        <p class="notification">[[newProjectFromTemplateForm.instructions]]</p>
+
+        <div id="template-project-form">
+
+        </div>
+    </div>
+</div>
+
+
+<div id="template-inline-popup">
+    <div class="inline-popup">boom</div>
+</div>
+
+<div id="template-start-timer-popup">
+    <div id="start-timer-popup">
+        <p>[[startTimerPopup.instructions]]</p>
+        <span class="button cancel">[[startTimerPopup.cancel]]</span>
+        <span class="button submit">[[startTimerPopup.startTimer]]</span>
+    </div>
+</div>
+
+</div>

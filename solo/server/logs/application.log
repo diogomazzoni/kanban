@@ -1,0 +1,468 @@
+[2017-05-16 0:38:00] [error] Fatal Error (1): Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'solo'' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:60
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(60): PDO->__construct('mysql:dbname=so...', 'root', '', Array)
+#1 /home/ubuntu/workspace/solo/server/core/database.class.php(34): phpSweetPDO\Connection->__construct('mysql:dbname=so...', 'root', '')
+#2 /home/ubuntu/workspace/solo/server/core/database.class.php(26): Database->connect()
+#3 /home/ubuntu/workspace/solo/server/core/database.class.php(58): Database->__construct()
+#4 /home/ubuntu/workspace/solo/server/core/auth.class.php(17): Database::getInstance()
+#5 /home/ubuntu/workspace/solo/server/core/controller.class.php(29): Auth->__construct()
+#6 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#7 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#8 /home/ubu
+    code: 1
+    message: 'Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'solo'' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:60
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(60): PDO->__construct('mysql:dbname=so...', 'root', '', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/database.class.php(34): phpSweetPDO\Connection->__construct('mysql:dbname=so...', 'root', '')
+    #2 /home/ubuntu/workspace/solo/server/core/database.class.php(26): Database->connect()
+    #3 /home/ubuntu/workspace/solo/server/core/database.class.php(58): Database->__construct()
+    #4 /home/ubuntu/workspace/solo/server/core/auth.class.php(17): Database::getInstance()
+    #5 /home/ubuntu/workspace/solo/server/core/controller.class.php(29): Auth->__construct()
+    #6 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #7 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #8 /home/ubu'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 60
+[2017-05-16 0:38:02] [error] Fatal Error (1): Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'solo'' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:60
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(60): PDO->__construct('mysql:dbname=so...', 'root', '', Array)
+#1 /home/ubuntu/workspace/solo/server/core/database.class.php(34): phpSweetPDO\Connection->__construct('mysql:dbname=so...', 'root', '')
+#2 /home/ubuntu/workspace/solo/server/core/database.class.php(26): Database->connect()
+#3 /home/ubuntu/workspace/solo/server/core/database.class.php(58): Database->__construct()
+#4 /home/ubuntu/workspace/solo/server/core/auth.class.php(17): Database::getInstance()
+#5 /home/ubuntu/workspace/solo/server/core/controller.class.php(29): Auth->__construct()
+#6 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#7 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#8 /home/ubu
+    code: 1
+    message: 'Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'solo'' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:60
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(60): PDO->__construct('mysql:dbname=so...', 'root', '', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/database.class.php(34): phpSweetPDO\Connection->__construct('mysql:dbname=so...', 'root', '')
+    #2 /home/ubuntu/workspace/solo/server/core/database.class.php(26): Database->connect()
+    #3 /home/ubuntu/workspace/solo/server/core/database.class.php(58): Database->__construct()
+    #4 /home/ubuntu/workspace/solo/server/core/auth.class.php(17): Database::getInstance()
+    #5 /home/ubuntu/workspace/solo/server/core/controller.class.php(29): Auth->__construct()
+    #6 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #7 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #8 /home/ubu'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 60
+[2017-05-16 0:43:27] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:30] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:33] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:42] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = '' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('', '')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace/solo/server/index.p
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = '' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('', '')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace/solo/server/index.p'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:42] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = '' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('', '')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace/solo/server/index.p
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = '' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('', '')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace/solo/server/index.p'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:43] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = '' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('', '')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace/solo/server/index.p
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = '' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('', '')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace/solo/server/index.p'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:47] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:48] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:43:49] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:10] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:11] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:12] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:12] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:13] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:13] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:13] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:13] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:13] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252
+[2017-05-16 0:44:56] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+#1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+#2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+#3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+#4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+#5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+#6 /home/ubuntu/workspace
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42S02]: Table 'solo.users' doesn't exist, driver error code is 1146 SQL: SELECT id from users WHERE email = 'admin' Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php:252
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(77): phpSweetPDO\Connection->_executeStatement(Object(PDOStatement), 'SELECT id from ...', Array)
+    #1 /home/ubuntu/workspace/solo/server/core/auth.class.php(134): phpSweetPDO\Connection->execute('SELECT id from ...')
+    #2 /home/ubuntu/workspace/solo/server/core/auth.class.php(89): Auth->username_available('admin')
+    #3 /home/ubuntu/workspace/solo/server/core/controller.class.php(32): Auth->login('admin', 'admin')
+    #4 /home/ubuntu/workspace/solo/server/core/request.class.php(117): Controller->__construct('app', 'login')
+    #5 /home/ubuntu/workspace/solo/server/core/request.class.php(27): Request->run_route()
+    #6 /home/ubuntu/workspace'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
+    line: 252

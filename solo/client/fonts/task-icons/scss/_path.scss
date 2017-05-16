@@ -1,0 +1,21 @@
+// Font paths
+// -------------------------
+
+@font-face {
+  font-family: "Collection-1";
+  src: url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.eot");
+  src: url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.woff2") format("woff2"),
+       url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.woff") format("woff"),
+       url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.ttf") format("truetype"),
+       url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.svg#Collection-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Collection-1";
+    src: url("../fonts/Collection-1_1139b1cd3c39457a927da2aba29cb94c.svg#Collection-1") format("svg");
+  }
+}
