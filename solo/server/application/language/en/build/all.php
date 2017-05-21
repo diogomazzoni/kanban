@@ -1,8 +1,9 @@
 <?php 
+//ESTE ARQUIVO QUE TEM QUE SER TRADUZIDO!!!!!!!!
 
 //form
 $LANG['form'] = array (
-  'submit' => 'Submit',
+  'submit' => 'Salvar',
 );
 
 //alert
@@ -12,129 +13,129 @@ $LANG['alert'] = array (
 
 //messages_panel
 $LANG['messagesPanel'] = array (
-  'refreshTitle' => 'Refresh Messages',
-  'hideTitle' => 'Hide Messages Panel',
-  'send' => 'Post Message',
-  'sendingMessage' => 'Posting Message...',
-  'discussionFor' => 'Discussion for ',
-  'backButtonText' => 'Back to ',
-  'attachFiles' => 'Attach Files',
-  'removeFiles' => 'Remove Files',
-  'postedOn' => 'posted on a',
-  'discussProject' => 'Discuss project',
+  'refreshTitle' => 'Atualizar mensagens',
+  'hideTitle' => 'Painel de Ocultar Mensagens',
+  'send' => 'Postar mensagem',
+  'sendingMessage' => 'Mensagem de lançamento...',
+  'discussionFor' => 'Discussão para ',
+  'backButtonText' => 'De volta a ',
+  'attachFiles' => 'Anexar arquivos',
+  'removeFiles' => 'Remover arquivos',
+  'postedOn' => 'Postado em um',
+  'discussProject' => 'Discutir projeto',
 );
 
 //sidebar
 $LANG['sidebar'] = array (
-  'dashboard' => 'Dashboard',
-  'projects' => 'Projects',
-  'invoices' => 'Invoices',
-  'reporting' => 'Reporting',
-  'billing' => 'Billing',
-  'estimates' => 'Estimates',
-  'recurringInvoices' => 'Recurring Invoices',
-  'clients' => 'Clients',
-  'files' => 'Files',
-  'tasks' => 'Tasks',
-  'users' => 'Users',
+  'dashboard' => 'Painel',
+  'projects' => 'Projetos',
+  'invoices' => 'Faturas',
+  'reporting' => 'Relatórios',
+  'billing' => 'Faturamento',
+  'estimates' => 'Estimativas',
+  'recurringInvoices' => 'Faturas Recorrentes',
+  'clients' => 'Clientes',
+  'files' => 'Arquivos',
+  'tasks' => 'Notas',
+  'users' => 'Usuários',
   'projectTemplates' => 'Templates',
   'admin' => 'Admin',
-  'misc' => 'Misc',
-  'more' => 'More',
+  'misc' => 'Diversos',
+  'more' => 'Mais',
   'templates' => 'Templates',
 );
 
 //invoice_list
 $LANG['invoiceList'] = array (
-  'invoiceNumber' => 'Invoice #',
+  'invoiceNumber' => 'Fatura #',
   'total' => 'Total',
-  'balance' => 'Balance',
+  'balance' => 'Equilibrar',
   'status' => 'Status',
-  'dueDate' => 'Due Date',
-  'noInvoices' => 'No invoices created yet',
-  'newInvoiceButton' => 'Invoice',
-  'creatingInvoiceNotification' => 'Creating Invoice. Please wait',
+  'dueDate' => 'Data de Vencimento',
+  'noInvoices' => 'Não foram criadas faturas ainda',
+  'newInvoiceButton' => 'Fatura',
+  'creatingInvoiceNotification' => 'Criando Fatura. Por favor, espere',
 );
 
 //file_list
 $LANG['fileList'] = array (
-  'title' => 'Title',
-  'type' => 'Type',
-  'uploadedBy' => 'Uploaded By',
-  'date' => 'Date',
-  'noFiles' => 'No files uploaded yet',
+  'title' => 'Título',
+  'type' => 'Tipo',
+  'uploadedBy' => 'Enviado por',
+  'date' => 'Data',
+  'noFiles' => 'Nenhum arquivo foi enviado ainda',
 );
 
 //task_details
 $LANG['taskDetails'] = array (
-  'errorSavingTitle' => 'Error saving task. Click to retry',
-  'deleteTitle' => 'Delete Task',
-  'editTitle' => 'Edit Task',
-  'viewTitle' => 'View Task',
-  'hasNotesTitle' => 'This task has notes',
-  'delete' => 'Delete',
-  'edit' => 'Edit',
-  'addFile' => 'Add File',
-  'details' => 'Details',
-  'timer' => 'Timer',
-  'attachments' => 'Attachments',
-  'assigned' => 'Assigned',
+  'errorSavingTitle' => 'Erro ao salvar a tarefa. Clique para tentar novamente',
+  'deleteTitle' => 'Excluir tarefa',
+  'editTitle' => 'Editar Tarefa',
+  'viewTitle' => 'Ver Tarefa',
+  'hasNotesTitle' => 'Esta tarefa tem notas',
+  'delete' => 'Excluir',
+  'edit' => 'Editar',
+  'addFile' => 'Adicionar Anexo',
+  'details' => 'Detalhes',
+  'timer' => 'Cronômetro',
+  'attachments' => 'Anexos',
+  'assigned' => 'Atribuído',
   'status' => 'Status',
-  'dueDate' => 'Due Date',
-  'completedDate' => 'Completed Date',
-  'totalTime' => 'Total Time',
-  'taskWeight' => 'Task Weight',
-  'taskWeightTitle' => 'Change task weight',
-  'noAttachments' => 'No attachments',
-  'inactiveTimer' => 'Not Active',
-  'enterTime' => 'Enter Time',
-  'startTimer' => 'Start Timer',
-  'stopTimer' => 'Stop Timer',
-  'timeEntries' => 'Time Entries',
-  'timeEntryDate' => 'Start Date',
-  'timeEntryUser' => 'User',
-  'timeEntryTime' => 'Time',
-  'deleteTimeEntryTitle' => 'Delete time entry',
-  'timerAlreadyRunning' => 'There is already a timer running. Please stop the running timer before starting a new one',
-  'deleteTimeEntryButton' => 'Delete Time Entry',
-  'deleteTimeEntryConfirmationMessage' => 'Are you sure you want to delete this time entry? This can not be undone.',
-  'deleteTaskButton' => 'Delete Task',
-  'deleteTaskConfirmationMessage' => 'Are you sure you want to delete this task? This action can not be undone.',
-  'discuss' => 'Discuss this task',
-  'files' => 'Files',
+  'dueDate' => 'Data de Vencimento',
+  'completedDate' => 'Data Concluída',
+  'totalTime' => 'Tempo total',
+  'taskWeight' => 'Peso da Tarefa',
+  'taskWeightTitle' => 'Alterar peso da tarefa',
+  'noAttachments' => 'Sem anexos',
+  'inactiveTimer' => 'Inativo',
+  'enterTime' => 'Inserir hora',
+  'startTimer' => 'Iniciar Temporizador',
+  'stopTimer' => 'Parar temporizador',
+  'timeEntries' => 'Hora de Entrada',
+  'timeEntryDate' => 'Data de início',
+  'timeEntryUser' => 'Usuário',
+  'timeEntryTime' => 'Tempo',
+  'deleteTimeEntryTitle' => 'Excluir entrada de tempo',
+  'timerAlreadyRunning' => 'Já existe um temporizador em execução. Por favor, pare o temporizador de funcionamento antes de iniciar um novo',
+  'deleteTimeEntryButton' => 'Excluir entrada de tempo',
+  'deleteTimeEntryConfirmationMessage' => 'Tem certeza de que deseja excluir esta entrada de tempo? Isto não pode ser desfeito.',
+  'deleteTaskButton' => 'Excluir tarefa',
+  'deleteTaskConfirmationMessage' => 'Tem certeza de que deseja excluir esta tarefa? Essa ação não pode ser desfeita.',
+  'discuss' => 'Discuta esta tarefa',
+  'files' => 'Arquivos',
   'due' => 'Due',
 );
 
 //recurring_invoice_form
 $LANG['recurringInvoiceForm'] = array (
-  'profileName' => 'Profile Name',
-  'repeatEvery' => 'Repeat Every',
-  'week' => 'Week',
-  '2weeks' => '2 Weeks',
-  'month' => 'Month',
-  '2months' => '2 Months',
-  '3months' => '3 Months',
-  '6months' => '6 Months',
-  'year' => 'Year',
-  '2years' => '2 Years',
-  '3years' => '3 Years',
-  'custom' => 'Custom',
-  'every' => 'Every?',
-  'everyDays' => 'Day(s)',
-  'everyWeeks' => 'Weeks(s)',
-  'everyMonths' => 'Months(s)',
-  'everyYears' => 'Year(s)',
-  'startsOn' => 'Start On',
-  'endsOn' => 'Ends On',
-  'paymentTerms' => 'Payment Terms',
+  'profileName' => 'Nome do perfil',
+  'repeatEvery' => 'Repita a cada',
+  'week' => 'Semana',
+  '2weeks' => '2 Semanas',
+  'month' => 'Mês',
+  '2months' => '2 Meses',
+  '3months' => '3 Meses',
+  '6months' => '6 Meses',
+  'year' => 'Ano',
+  '2years' => '2 Anos',
+  '3years' => '3 Anos',
+  'custom' => 'personalizadas',
+  'every' => 'Cada?',
+  'everyDays' => 'Dia(s)',
+  'everyWeeks' => 'Semana(s)',
+  'everyMonths' => 'Meses',
+  'everyYears' => 'Ano(s)',
+  'startsOn' => 'Comece em',
+  'endsOn' => 'Termina em',
+  'paymentTerms' => 'Termos de pagamento',
 );
 
 //time_entry_form
 $LANG['timeEntryForm'] = array (
-  'title' => 'Enter time',
-  'hours' => 'Hours',
-  'minutes' => 'Minutes',
-  'seconds' => 'Seconds',
+  'title' => 'Insira a hora',
+  'hours' => 'Horas',
+  'minutes' => 'Minutos',
+  'seconds' => 'Segundos',
   'hoursPlaceholder' => 'hh',
   'minutesPlaceholder' => 'mm',
   'secondsPlaceholder' => 'ss',
@@ -142,68 +143,68 @@ $LANG['timeEntryForm'] = array (
 
 //file_view
 $LANG['fileView'] = array (
-  'errorLoading' => 'Unable to load preview',
-  'unsupportedType' => 'No preview for this file type',
-  'loading' => 'Loading Preview...',
-  'uploaded' => 'Uploaded',
-  'download' => 'Download',
-  'notes' => 'Notes',
-  'editNotes' => 'Edit Notes',
-  'delete' => 'Delete',
-  'uploadedDate' => 'Upload Date',
-  'uploadedBy' => 'Uploaded By',
-  'size' => 'Size',
-  'invalidType' => 'Invalid Type',
-  'deleteFile' => 'Delete File',
-  'deleteFileConfirmation' => 'Are you sure? Once a file is deleted it can not be restored.',
-  'discuss' => 'Discuss this file',
+  'errorLoading' => 'Não foi possível carregar a pré-visualização',
+  'unsupportedType' => 'Sem pré-visualização para este tipo de ficheiro',
+  'loading' => 'Carregando visualização...',
+  'uploaded' => 'Carregado',
+  'download' => 'Transferir',
+  'notes' => 'Notas',
+  'editNotes' => 'Editar Notas',
+  'delete' => 'Excluir',
+  'uploadedDate' => 'Data de upload',
+  'uploadedBy' => 'Enviado por',
+  'size' => 'Tamanho',
+  'invalidType' => 'Tipo inválido',
+  'deleteFile' => 'Excluir arquivo',
+  'deleteFileConfirmation' => 'Você tem certeza? Quando um arquivo é excluído, ele não pode ser restaurado.',
+  'discuss' => 'Revisar este arquivo',
 );
 
 //invoice_view
 $LANG['invoiceView'] = array (
   'invoice' => 'Invoice',
   'to' => 'To',
-  'changeDateTitle' => 'Click to change date',
+  'changeDateTitle' => 'Clique para alterar a data',
   'due' => 'Due',
-  'numberShort' => 'No.',
-  'dateShort' => 'Date',
+  'numberShort' => 'N°.',
+  'dateShort' => 'Data',
   'statusShort' => 'Status',
   'item' => 'Item',
   'quantity' => 'HRS/QTY',
-  'rate' => 'Rate',
+  'rate' => 'Taxa',
   'subtotal' => 'Subtotal',
-  'addItem' => 'Add New Invoice Item',
-  'editItem' => 'Edit Item',
-  'deleteItem' => 'Delete item',
-  'summary' => 'Invoice Summary',
-  'tax' => 'Tax',
+  'addItem' => 'Adicionar novo item de fatura',
+  'editItem' => 'Editar Item',
+  'deleteItem' => 'Excluir item',
+  'summary' => 'Resumo da fatura',
+  'tax' => 'Imposto',
   'total' => 'Total',
-  'terms' => 'All totals are final and non-negotiable. Payments must be made by the specified due date with no exceptions. Mailed checks must be postmarked by the due date above.',
-  'adminPreviewNotice' => 'This is how your client will see the {{type}}.',
-  'adminPreviewNoticeClose' => 'Close Preview',
-  'clientPreviewNotice' => 'to close the invoice preview.',
-  'clientPreviewNoticeClose' => 'Click here',
-  'invoiceSent' => 'Invoice Sent',
-  'deleteInvoiceButton' => 'Delete Invoice',
-  'deleteInvoiceConfirmationMessage' => 'Are you sure you want to delete this invoice? This can not be undone.',
-  'enterPayment' => 'Enter Payment',
-  'confirmNavigation' => 'The invoice has not been saved. Are you sure you would like to leave this page?',
-  'page' => 'Page',
-  'payNow' => 'Pay Now',
-  'chooseClient' => 'Choose Client',
+  'terms' => 'Todos os totais são finais e não negociáveis. Os pagamentos devem ser feitos até a data de vencimento especificada, sem exceções. Os cheques enviados por correio devem ser datados da data de vencimento acima.',
+  'adminPreviewNotice' => 'É assim que seu cliente verá o {{tipo}}.',
+  'adminPreviewNoticeClose' => 'Fechar a visualização',
+  'clientPreviewNotice' => 'Para fechar a pré-visualização da fatura.',
+  'clientPreviewNoticeClose' => 'Clique aqui',
+  'invoiceSent' => 'Fatura enviada',
+  'deleteInvoiceButton' => 'Excluir fatura',
+  'deleteInvoiceConfirmationMessage' => 'Tem a certeza de que pretende eliminar esta fatura? Isto não pode ser desfeito.',
+  'enterPayment' => 'Inserir pagamento',
+  'confirmNavigation' => 'A fatura não foi salva. Tem certeza de que deseja sair desta página?',
+  'page' => 'Página',
+  'payNow' => 'Pague agora',
+  'chooseClient' => 'Escolha o Cliente',
 );
 
 //recurring_invoice_view
 $LANG['recurringInvoiceView'] = array (
-  'stopRecurringInvoiceButton' => 'Stop Recurring Invoice',
-  'stopRecurringInvoiceConfirmationMessage' => 'Are you sure you want to stop this recurring invoice? No further invoices will be generated and sent.',
-  'startRecurringInvoiceButton' => 'Start Recurring Invoice',
-  'startRecurringInvoiceConfirmationMessage' => 'Are you sure you want to start this recurring invoice?',
+  'stopRecurringInvoiceButton' => 'Parar Fatura Recorrente',
+  'stopRecurringInvoiceConfirmationMessage' => 'Tem a certeza de que pretende interromper esta fatura recorrente? Nenhuma outra fatura será gerada e enviada.',
+  'startRecurringInvoiceButton' => 'Iniciar fatura recorrente',
+  'startRecurringInvoiceConfirmationMessage' => 'Tem a certeza de que pretende iniciar esta fatura recorrente?',
 );
 
 //recurring_invoices
 $LANG['recurringInvoices'] = array (
-  'newRecurringInvoice' => 'New Recurring Invoice',
+  'newRecurringInvoice' => 'Nova Fatura Recorrente',
   'invoiceNumber' => 'Invoice #',
   'total' => 'Total',
   'balance' => 'Balance',
@@ -214,30 +215,30 @@ $LANG['recurringInvoices'] = array (
 
 //recurring_invoice_details
 $LANG['recurringInvoiceDetails'] = array (
-  'inactive' => 'Inactive',
-  'frequency' => 'Frequency',
+  'inactive' => 'Inativo',
+  'frequency' => 'Frequência',
   'startDate' => 'Start Date',
-  'endDate' => 'End Date',
-  'nextInvoiceDate' => 'Next Invoice Date',
-  'invoiceNumber' => 'Invoice #',
+  'endDate' => 'Data final',
+  'nextInvoiceDate' => 'Próxima data da fatura',
+  'invoiceNumber' => 'Fatura #',
   'total' => 'Total',
-  'balance' => 'Balance',
+  'balance' => 'Equilibrar',
   'status' => 'Status',
-  'dueDate' => 'Due Date',
+  'dueDate' => 'Data de Vencimento',
 );
 
 //cards
 $LANG['cards'] = array (
-  'errorSaving' => 'Error saving task. Click to retry',
-  'newTask' => 'New task',
-  'newSection' => 'New Section',
-  'hasNotes' => 'This task has notes',
-  'viewTask' => 'View Task',
+  'errorSaving' => 'Erro ao salvar a tarefa. Clique para tentar novamente',
+  'newTask' => 'Nova tarefa',
+  'newSection' => 'Nova Seção',
+  'hasNotes' => 'Esta tarefa tem notas',
+  'viewTask' => 'Ver Tarefa',
 );
 
 //info_panel
 $LANG['infoPanel'] = array (
-  'close' => 'close',
+  'close' => 'fechar',
 );
 
 //estimate_list
@@ -245,47 +246,47 @@ $LANG['estimateList'] = array (
   'estimateNumber' => 'Estimate #',
   'total' => 'Total',
   'status' => 'Status',
-  'noEstimates' => 'No estimates created yet',
+  'noEstimates' => 'Ainda não foram criadas estimativas',
 );
 
 //estimate_details
 $LANG['estimateDetails'] = array (
   'estimateNumber' => 'Estimate #',
   'dateCreated' => 'Date Created',
-  'dateSent' => 'Date Sent',
+  'dateSent' => 'Data enviada',
   'status' => 'Status',
-  'approved' => 'Approved',
-  'rejected' => 'Rejected',
-  'estimateSent' => 'Estimate Sent',
+  'approved' => 'Aprovado',
+  'rejected' => 'Rejeitado',
+  'estimateSent' => 'Estimativa enviada',
 );
 
 //cards_section_options
 $LANG['cardsSectionOptions'] = array (
-  'editSection' => 'Edit Section',
-  'sectionName' => 'Section Name',
-  'markTasksComplete' => 'Mark tasks complete when moved into this section',
-  'deleteSection' => 'Delete Section',
+  'editSection' => 'Editar seção',
+  'sectionName' => 'Nome da Seção',
+  'markTasksComplete' => 'Marcar tarefas concluídas quando movido para esta seção',
+  'deleteSection' => 'Excluir seção',
 );
 
 //estimate_view
 $LANG['estimateView'] = array (
-  'deleteEstimateConfirmationMessage' => 'Are you sure you would like to delete this estimate?',
-  'deleteEstimateButton' => 'Delete Estimate',
+  'deleteEstimateConfirmationMessage' => 'Tem a certeza de que pretende eliminar esta estimativa?',
+  'deleteEstimateButton' => 'Excluir estimativa',
 );
 
 //invoice_editor
 $LANG['invoiceEditor'] = array (
   'doneButton' => 'Done Editing :type',
-  'saveButton' => 'Save & Continue',
+  'saveButton' => 'Salvar e continuar',
   'makeRecurring' => 'Make Recurring',
-  'importTasksButton' => 'Import Tasks',
-  'deleteButton' => 'Delete',
-  'showCompetedTasks' => 'Show completed tasks',
-  'editItemTitle' => 'Edit item',
+  'importTasksButton' => 'Importar Tarefas',
+  'deleteButton' => 'Excluir',
+  'showCompetedTasks' => 'Mostrar tarefas concluídas',
+  'editItemTitle' => 'Editar item',
   'deleteItemTitle' => 'Delete item',
-  'deleteConfirmationButton' => 'Delete Invoice',
-  'deleteConfirmationMessage' => 'Are you sure you want to delete this invoice? This can not be undone.',
-  'recurringSeriesMessage' => 'This invoice was created from a recurring series - :profileName. The next invoice date is :nextInvoiceDate',
+  'deleteConfirmationButton' => 'Excluir fatura',
+  'deleteConfirmationMessage' => 'Tem a certeza de que pretende eliminar este projeto? Isto não pode ser desfeito.',
+  'recurringSeriesMessage' => 'Este projeto foi criado a partir de uma série recorrente -: profileName. A próxima data do projeto é: nextInvoiceDate',
 );
 
 //tax_rates
@@ -594,19 +595,19 @@ $LANG['projectDetails'] = array (
 
 //delete_project
 $LANG['deleteProject'] = array (
-  'title' => 'Delete Project',
+  'title' => 'Excluir projeto',
   'message' => 'Are you sure you want to delete :name?',
-  'button' => 'Delete project',
-  'secondaryTitle' => 'Delete Project - Confirmation',
-  'secondaryMessage' => 'This will also delete all files and tasks in \\":name\\". Are you sure you would like to delete this project?',
-  'secondaryButton' => 'Yes, delete this project',
-  'inProgress' => 'Deleting project',
+  'button' => 'Excluir projeto',
+  'secondaryTitle' => 'Excluir projeto - Confirmação',
+  'secondaryMessage' => 'Isso também irá excluir todos os arquivos e tarefas em \\ ": nome \\". Tem certeza de que deseja excluir este projeto?',
+  'secondaryButton' => 'Sim, excluir este projeto',
+  'inProgress' => 'Excluindo projeto',
 );
 
 //archive_project
 $LANG['archiveProject'] = array (
   'title' => 'Archive Board',
-  'message' => 'Are you sure you want to archive :name? This will remove it from the active boards list',
+  'message' => 'Tem certeza de que deseja arquivar: name? Isso o removerá da lista de placas ativas',
   'button' => 'Archive board',
   'inProgress' => 'Archiving board',
 );
@@ -654,35 +655,35 @@ $LANG['deleteUser'] = array (
 
 //header
 $LANG['header'] = array (
-  'greeting' => 'Hi,',
-  'search' => 'search',
-  'logout' => 'Logout',
+  'greeting' => 'Oi,',
+  'search' => 'pesquisa',
+  'logout' => 'Sair',
 );
 
 //task_filter
 $LANG['taskFilter'] = array (
   'filter' => 'Filter',
-  'incomplete' => 'Incomplete',
-  'complete' => 'Complete',
-  'all' => 'All',
-  'myTasks' => 'My Tasks',
-  'allTasks' => 'All Tasks',
-  'search' => 'search',
-  'filterNotification' => 'Showing :filterValue',
-  'searchNotification' => 'Search results for: :searchTerm',
-  'closeSearch' => 'clear',
+  'incomplete' => 'Incompleto',
+  'complete' => 'Completo',
+  'all' => 'Todos',
+  'myTasks' => 'Minhas tarefas',
+  'allTasks' => 'Todas Tarefas',
+  'search' => 'pesquisa',
+  'filterNotification' => 'Mostrando :filterValue',
+  'searchNotification' => 'Resultados da pesquisa para:: searchTerm',
+  'closeSearch' => 'Claro',
 );
 
 //task_list
 $LANG['taskList'] = array (
-  'noTasks' => 'There are no tasks for this project. Start typing below to add one...',
-  'completedTasks' => 'Completed Tasks',
+  'noTasks' => 'Não existem tarefas para este projeto. Comece a digitar abaixo para adicionar um...',
+  'completedTasks' => 'Tarefas concluídas',
 );
 
 //task_list_items
 $LANG['taskListItems'] = array (
-  'deleteTask' => 'Delete Task',
-  'deleteTaskMessage' => 'Are you sure you want to delete this :type? This can not be undone.',
+  'deleteTask' => 'Excluir tarefa',
+  'deleteTaskMessage' => 'Tem certeza de que deseja excluir este: type? Isto não pode ser desfeito.',
 );
 
 //dashboard
@@ -710,46 +711,46 @@ $LANG['dashboardProjectList'] = array (
 
 //project_notes
 $LANG['projectNotes'] = array (
-  'editNotes' => 'Edit Notes',
-  'noNotes' => 'No notes for this project',
-  'doneEditing' => 'Done Editing',
-  'saving' => 'Saving Notes',
+  'editNotes' => 'Editar notas',
+  'noNotes' => 'Sem notas para este projeto',
+  'doneEditing' => 'Terminar a edição',
+  'saving' => 'Guardar notas',
 );
 
 //global_search
 $LANG['globalSearch'] = array (
-  'filter' => 'Filter',
-  'all' => 'All',
-  'projects' => 'Projects',
-  'tasks' => 'Tasks',
-  'invoices' => 'Invoices',
-  'files' => 'Files',
-  'messages' => 'Messages',
-  'projectsTitle' => 'Projects',
-  'projectName' => 'Name',
-  'projectDueDate' => 'Due Date',
+  'filter' => 'Filtro',
+  'all' => 'Todos',
+  'projects' => 'Projetos',
+  'tasks' => 'Tarefas',
+  'invoices' => 'Faturas',
+  'files' => 'Arquivos',
+  'messages' => 'Mensagens',
+  'projectsTitle' => 'Projetos',
+  'projectName' => 'Nome',
+  'projectDueDate' => 'Data de Vencimento',
   'projectStatus' => 'Status',
-  'tasksTitle' => 'Tasks',
-  'taskName' => 'Task',
-  'taskProject' => 'Project',
-  'taskDueDate' => 'Due Date',
+  'tasksTitle' => 'Tarefas',
+  'taskName' => 'Tarefas',
+  'taskProject' => 'Projeto',
+  'taskDueDate' => 'Data de Vencimento',
   'taskStatus' => 'Status',
   'invoicesTitle' => 'Invoices',
   'invoiceNumber' => 'Invoice #',
   'invoiceTotal' => 'Total',
   'invoiceBalance' => 'Balance',
   'invoiceStatus' => 'Status',
-  'invoiceDueDate' => 'Due Date',
-  'clientsTitle' => 'Clients',
-  'clientName' => 'Name',
-  'filesTitle' => 'Files',
-  'fileName' => 'Name',
+  'invoiceDueDate' => 'Data de Vencimento',
+  'clientsTitle' => 'Clientes',
+  'clientName' => 'Nome',
+  'filesTitle' => 'Arquivos',
+  'fileName' => 'Nome',
   'fileType' => 'Type',
-  'fileProject' => 'Project',
+  'fileProject' => 'Projeto',
   'usersTitle' => 'Users',
-  'userName' => 'Name',
+  'userName' => 'Nome',
   'userEmail' => 'Email',
-  'messagesTitle' => 'Messages',
+  'messagesTitle' => 'Mensagens',
   'resultsMessage' => 'Showing :type',
 );
 
@@ -761,34 +762,34 @@ $LANG['globalSearchNoResults'] = array (
 
 //forgot_password
 $LANG['forgotPassword'] = array (
-  'forgotPassword' => 'Forgot Password',
-  'instructions' => 'Please enter the email address you use to log into the system.',
-  'checkEmail' => 'Please check your email for instructions on accessing the system. Thank you.',
+  'forgotPassword' => 'Esqueceu a senha',
+  'instructions' => 'Introduza o endereço de e-mail que utiliza para iniciar sessão no sistema.',
+  'checkEmail' => 'Verifique seu e-mail para obter instruções sobre como acessar o sistema. Obrigado.',
 );
 
 //change_password
 $LANG['changePassword'] = array (
-  'currentPassword' => 'Current Password',
-  'newPassword' => 'New Password',
-  'confirmNewPassword' => 'Confirm New Password',
-  'title' => 'Change Password',
-  'passwordChanged' => 'Password changed',
-  'passwordSent' => 'The new password has been sent',
+  'currentPassword' => 'Senha atual',
+  'newPassword' => 'Nova senha',
+  'confirmNewPassword' => 'Confirme a nova senha',
+  'title' => 'Mudar senha',
+  'passwordChanged' => 'Senha alterada',
+  'passwordSent' => 'A nova senha foi enviada',
 );
 
 //send_password
 $LANG['sendPassword'] = array (
   'instructions' => 'This will reset the user\'s password and send a new one to their email address.',
   'submit' => 'Send New Password',
-  'cancel' => 'Cancel',
+  'cancel' => 'Cancelar',
   'title' => 'Send Password',
   'passwordSent' => 'Password sent',
 );
 
 //activity_list
 $LANG['activityList'] = array (
-  'showAll' => 'Show All',
-  'noActivity' => 'No activity yet',
+  'showAll' => 'Mostre tudo',
+  'noActivity' => 'Nenhuma atividade ainda',
 );
 
 //admin_settings
@@ -834,18 +835,18 @@ $LANG['deleteInvoice'] = array (
 
 //panel_loading
 $LANG['panelLoading'] = array (
-  'loading' => 'Loading...',
+  'loading' => 'Carregando...',
 );
 
 //panel_no_selection
 $LANG['panelNoSelection'] = array (
-  'makeSelection' => 'Please make a selection',
+  'makeSelection' => 'Faça uma seleção',
 );
 
 //admin_form
 $LANG['adminForm'] = array (
-  'title' => 'New Admin',
-  'adminCreated' => 'Admin created',
+  'title' => 'Novo Admin',
+  'adminCreated' => 'Admin criado',
 );
 
 //agent_form
@@ -856,8 +857,8 @@ $LANG['agentForm'] = array (
 
 //new_project_from_template_form
 $LANG['newProjectFromTemplateForm'] = array (
-  'title' => 'New Project',
-  'instructions' => 'Please review the project name, client, and dates. When you\'re done, click create.',
+  'title' => 'Novo projeto',
+  'instructions' => 'Revise o nome do projeto, o cliente e as datas. Quando terminar, clique em criar.',
 );
 
 //reporting
@@ -909,11 +910,11 @@ $LANG['addUserToProject'] = array (
 
 //cs_validation
 $LANG['csValidation'] = array (
-  'default' => 'Please correct this value',
-  'email' => 'Please enter a valid email address',
-  'url' => 'Please enter a valid url',
-  'number' => 'Please enter a numeric value',
-  'radio' => 'Please select an option',
+  'default' => 'Corrija este valor',
+  'email' => 'Por favor insira um endereço de e-mail válido',
+  'url' => 'Por favor, insira um URL válido',
+  'number' => 'Insira um valor numérico',
+  'radio' => 'Por favor selecione uma opção',
   'max' => 'Please enter a value larger than $1',
   'min' => 'Please enter a value of at least $1',
   'required' => 'Please complete this mandatory field',
@@ -932,33 +933,33 @@ $LANG['datepicker'] = array (
 $LANG['moment'] = array (
   'months' => 
   array (
-    0 => 'January',
-    1 => 'February',
-    2 => 'March',
-    3 => 'April',
-    4 => 'May',
-    5 => 'June',
-    6 => 'July',
-    7 => 'August',
-    8 => 'September',
-    9 => 'October',
-    10 => 'November',
-    11 => 'December',
+    0 => 'Janeiro',
+    1 => 'Fevereiro',
+    2 => 'Março',
+    3 => 'Abril',
+    4 => 'Maio',
+    5 => 'Junho',
+    6 => 'Julho',
+    7 => 'Agosto',
+    8 => 'Setembro',
+    9 => 'Outubro',
+    10 => 'Novembro',
+    11 => 'Dezembro',
   ),
   'monthsShort' => 
   array (
     0 => 'Jan',
-    1 => 'Feb',
+    1 => 'Fev',
     2 => 'Mar',
-    3 => 'Apr',
-    4 => 'May',
+    3 => 'Abr',
+    4 => 'Mai',
     5 => 'Jun',
     6 => 'Jul',
-    7 => 'Aug',
-    8 => 'Sep',
-    9 => 'Oct',
+    7 => 'Ago',
+    8 => 'Set',
+    9 => 'Out',
     10 => 'Nov',
-    11 => 'Dec',
+    11 => 'Dez',
   ),
   'weekdays' => 
   array (
@@ -1201,12 +1202,12 @@ $LANG['articles'] = array (
 
 //filters
 $LANG['filters'] = array (
-  'inProgress' => 'In Progress',
-  'archived' => 'Archived',
-  'all' => 'All',
-  'paid' => 'Paid',
-  'overdue' => 'Overdue',
-  'unpaid' => 'Unpaid',
+  'inProgress' => 'Em andamento',
+  'archived' => 'Archivados',
+  'all' => 'Todos',
+  'paid' => 'Pago',
+  'overdue' => 'Atrasado',
+  'unpaid' => 'Não remunerado',
 );
 
 //calendar
@@ -1217,17 +1218,17 @@ $LANG['calendar'] = array (
 
 //entity_list
 $LANG['entityList'] = array (
-  'new' => 'New',
+  'new' => 'Novo',
 );
 
 //settings_overview
 $LANG['settingsOverview'] = array (
   'enableDebugging' => 'Enable Debugging?',
   'baseUrl' => 'Base Url',
-  'language' => 'Language',
+  'language' => 'Linguagem',
   'datepickerFormat' => 'Datepicker Format',
   'invoiceDateFormat' => 'Invoice Date Format',
-  'companyName' => 'Name',
+  'companyName' => 'Nome',
   'companyAddress1' => 'Address Line 1',
   'companyAddress2' => 'Address Line 2',
   'companyEmail' => 'Email',
@@ -1239,7 +1240,7 @@ $LANG['settingsOverview'] = array (
   'emailPort' => 'Port',
   'emailEnableAuthentication' => 'Enable Authentication?',
   'emailUsername' => 'Username',
-  'emailPassword' => 'Password',
+  'emailPassword' => 'Senha',
   'emailEnableEncryption' => 'Enable Encryption?',
   'invoiceBaseInvoiceNumber' => 'Base Invoice Number',
   'invoiceTaxRate' => 'Tax Rate',
@@ -1286,7 +1287,7 @@ $LANG['peopleView'] = array (
 $LANG['removePersonView'] = array (
   'title' => 'Remove person',
   'message' => 'Are you sure you want to remove :name from this project?',
-  'buttonText' => 'Remove',
+  'buttonText' => 'Remover',
   'inProgress' => 'Removing person',
 );
 
@@ -1324,30 +1325,30 @@ $LANG['assignTaskView'] = array (
 //start_timer_popup
 $LANG['startTimerPopup'] = array (
   'instructions' => 'Start timer for this task?',
-  'cancel' => 'Cancel',
+  'cancel' => 'Cancelar',
   'startTimer' => 'Start timer',
 );
 
 //smart_menu
 $LANG['smartMenu'] = array (
-  'more' => 'More',
+  'more' => 'Mais',
   'menu' => 'Menu',
 );
 
 //email
 $LANG['email'] = array (
-  'quotedTextSeparator' => 'Please type your reply above this line',
+  'quotedTextSeparator' => 'Por favor digite sua resposta acima desta linha',
 );
 
 //agenda
 $LANG['agenda'] = array (
-  'myTasks' => 'My Tasks',
-  'billing' => 'Billing',
-  'activity' => 'Activity',
-  'showingEventsFor' => 'Showing events for',
-  'today' => 'Today',
-  'upcoming' => 'Upcoming',
-  'other' => 'Other',
-  'noTasks' => 'No Tasks',
+  'myTasks' => 'Minhas tarefas',
+  'billing' => 'Faturamento',
+  'activity' => 'Atividade',
+  'showingEventsFor' => 'Mostrando eventos para',
+  'today' => 'Hoje',
+  'upcoming' => 'próximos',
+  'other' => 'De outros',
+  'noTasks' => 'Sem tarefas',
 );
 
