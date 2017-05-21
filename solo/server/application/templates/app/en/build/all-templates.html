@@ -9,8 +9,8 @@
     <div id="template-dashboard-menu">
         <div class="link-menu">
             <ul>
-                <li class="boards-tab"><a href="#boards">Boards</a></li>
-                <li class="agenda-tab"><a href="#agenda">Your Agenda</a></li>
+                <li class="boards-tab"><a href="#boards">Projetos</a></li>
+                <li class="agenda-tab"><a href="#agenda">Sua Agenda</a></li>
             </ul>
         </div>
     </div>
@@ -27,7 +27,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details">{{task}}</div>
@@ -40,13 +40,13 @@
                     </div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
 
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{/each}}
@@ -60,7 +60,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details">{{this.section.name}}</div>
@@ -77,7 +77,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details">{{task}}</div>
@@ -90,13 +90,13 @@
                     </div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
 
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{/each}}
@@ -120,7 +120,7 @@
 
                                 <div class="is-task-completed task-status-indicator"></div>
                                 <div class="saving-indicator task-status-indicator"></div>
-                                <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                             </div>
 
                             <div class="task-details">{{task}}</div>
@@ -134,13 +134,13 @@
                             <div class="task-meta">
                                 {{#hasNotes}}
                                 <span class="has-notes task-list-icon ti-notepad"
-                                      title="This task has notes"></span>
+                                      title="Esta tarefa tem notas"></span>
                                 {{/hasNotes}}
                             </div>
                             <div class="task-actions">
 
 
-                                <div class="view-task ti-eye" title="View Task"></div>
+                                <div class="view-task ti-eye" title="Ver Tarefa"></div>
                             </div>
                         </li>
                         {{/each}}
@@ -160,7 +160,7 @@
                                         <div class="is-task-completed task-status-indicator"></div>
                                         {{/../../userCanCompleteTasks}}
                                         <div class="saving-indicator task-status-indicator"></div>
-                                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                                         <div class="task-details">{{this.task}}</div>
 
                                         <a class="user-image" href="{{userLink}}">{{{userImage}}}</a>
@@ -200,7 +200,7 @@
                             {{#userCanCreateTasks}}
                             <div class="new-section">
                                 <div class="card-column-header">&nbsp;</div>
-                                <input id="new-section-input" type="text" placeholder="New Section" name="name"></div>
+                                <input id="new-section-input" type="text" placeholder="Nova Seção" name="name"></div>
                             {{/userCanCreateTasks}}
                         </div>
 
@@ -218,7 +218,7 @@
                     <div class="is-task-completed task-status-indicator"></div>
                     {{/../userCanCompleteTasks}}
                     <div class="saving-indicator task-status-indicator"></div>
-                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                    <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     <div class="task-details">{{this.task}}</div>
 
                     <a class="user-image" href="{{userLink}}">{{userImage}}</a>
@@ -229,7 +229,7 @@
 
             {{#userCanCreateTasks}}
             <div class="new-card">
-                <input class="new-task-input" type="text" placeholder="New task"
+                <input class="new-task-input" type="text" placeholder="Nova Tarefa"
                        data-section-id="{{id}}">
             </div>
             {{/userCanCreateTasks}}
@@ -242,14 +242,14 @@
             <div class="is-task-completed task-status-indicator"></div>
             {{/userCanCompleteTasks}}
             <div class="saving-indicator task-status-indicator"></div>
-            <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+            <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
             <div class="task-details">{{task}}</div>
         </div>
     </div>
 
     <div id="template-section-options">
         <form action="" class="form">
-            <h3>Edit Section</h3>
+            <h3>Editar Seção</h3>
 
             <div class="field">
                 <label for="">Section name</label>
@@ -257,11 +257,11 @@
             </div>
 
             <div class="field">
-                <label for="">Mark tasks complete when moved into this section</label>
+                <label for="">Marcar tarefas concluídas quando movido para esta seção</label>
                 <input id="mark-tasks-complete" type="checkbox" name="action_mark_tasks_complete">
             </div>
             <hr>
-            <div id="delete_section" class="button danger">Delete section</div>
+            <div id="delete_section" class="button danger">Apagar seção</div>
         </form>
 
     </div>
@@ -277,7 +277,7 @@
             <div class="more">
                 <span class="sidebar-icon ti-more-alt more-icon"></span>
 
-                <span class="smart-menu-more-text">More</span>
+                <span class="smart-menu-more-text">Mais</span>
                 <span class="smart-menu-menu-text">Menu</span>
                 <span class="sidebar-icon ti-angle-down menu-icon"></span>
                 <ul class="smart-menu-overflow">
@@ -320,8 +320,8 @@
                 <li class="board new-board">
                     <div class="board-content">
                         <span class="new-board-icon">+</span>
-                        <h4>New Board</h4>
-                        <p>Create a new project board</p>
+                        <h4>Novo Projeto</h4>
+                        <p>Criar novo Projeto</p>
                     </div>
                 </li>
                 {{/if}}
@@ -332,8 +332,8 @@
                 <li class="board new-board">
                     <div class="board-content">
                         <span class="new-board-icon">+</span>
-                        <h4>New Board</h4>
-                        <p>Create a new project board</p>
+                        <h4>Novo Projeto</h4>
+                        <p>Criar novo Projeto</p>
                     </div>
                 </li>
                 {{/if}}
@@ -341,7 +341,7 @@
 
             {{#if hasArchived}}
             <div id="archived-boards">
-                <h5 id="archived-title" >Archived ({{archivedCount}})
+                <h5 id="archived-title" >Arquivado ({{archivedCount}})
                     <span class="ti-angle-right closed"></span>
                     <span class="ti-angle-down open"></span>
                 </h5>
@@ -363,22 +363,22 @@
 
     <div id="template-board-dropdown">
         <ul class="board-dropdown dropdown-button-dropdown">
-            <li id="edit-board-button">Edit Board</li>
+            <li id="edit-board-button">Editar Projeto</li>
             {{#if isArchived}}
-            <li id="unarchive-board-button">Unarchive Board</li>
+            <li id="unarchive-board-button">Desarquivar Projeto</li>
             {{else}}
-            <li id="archive-board-button">Archive Board</li>
+            <li id="archive-board-button">Arquivar Projeto</li>
             {{/if}}
-            <li id="delete-board-button">Delete Board</li>
+            <li id="delete-board-button">Apagar Projeto</li>
         </ul>
     </div>
 
     <div id="template-board-buttons">
         <div class="link-menu">
             <ul>
-                <li class="tasks-tab"><a class="board-tasks" href="#boards/{{id}}/tasks">Tasks</a></li>
-                <li class="files-tab"><a class="board-files" href="#boards/{{id}}/files">Files</a></li>
-                <li class="notes-tab"><a class="board-notes" href="#boards/{{id}}/notes">Notes</a></li>
+                <li class="tasks-tab"><a class="board-tasks" href="#boards/{{id}}/tasks">Tarefas</a></li>
+                <li class="files-tab"><a class="board-files" href="#boards/{{id}}/files">Arquivos</a></li>
+                <li class="notes-tab"><a class="board-notes" href="#boards/{{id}}/notes">Notas</a></li>
             </ul>
         </div>
 
@@ -390,7 +390,7 @@
             <li>
                 <a href="#boards">
                     <span class="icons8-briefcase"></span>
-                    <span class="text">Boards</span>
+                    <span class="text">Projetos</span>
                 </a>
 
             </li>
@@ -409,7 +409,7 @@
             <li class="boards-button">
                 <a href="#boards">
                     <span class="icons8-briefcase icon"></span>
-                    <span class="text">Boards</span>
+                    <span class="text">Projetos</span>
                 </a>
 
             </li>
@@ -431,21 +431,21 @@
             <li class="tasks-button">
                 <a href="#boards/{{id}}">
                     <span class="icons8-checked-checkbox-2 icon"></span>
-                    <span class="text">Tasks</span>
+                    <span class="text">Tarefas</span>
                 </a>
             </li>
 
             <li class="files-button">
                 <a href="#boards/{{id}}/files">
                     <span class="icons8-document icon"></span>
-                    <span class="text">Files</span>
+                    <span class="text">Arquivos</span>
                 </a>
             </li>
 
             <li class="notes-button">
                 <a href="#boards/{{id}}/notes">
                     <span class="icons8-info icon"></span>
-                    <span class="text">Notes</span>
+                    <span class="text">Notas</span>
                 </a>
             </li>
         </ul>
@@ -541,7 +541,7 @@
     <div id="template-empty-task-list">
         <div class="empty-task-list">
             <img src="client/images/crane.svg" alt="">
-            <h3>No tasks yet. Add your first section, and then you can start adding tasks.</h3>
+            <h3>Nenhuma tarefa ainda. Adicione sua primeira seção, e então você pode começar a adicionar tarefas.</h3>
         </div>
     </div>
 
@@ -637,9 +637,9 @@
         <div id="file-list-wrapper" class="list condensed file-list">
             <div class="list-main-header">
                 <div class="file-extension"></div>
-                <div class="file-title">Title</div>
-                <div class="file-type">Type</div>
-                <div class="file-uploader-name">Uploaded By</div>
+                <div class="file-title">Título</div>
+                <div class="file-type">Tipo</div>
+                <div class="file-uploader-name">Enviado por</div>
                 <div class="file-create-date">Date</div>
             </div>
 
@@ -668,7 +668,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details"><input type="text" value="{{task}}" disabled="disabled"></div>
@@ -681,13 +681,13 @@
                     </div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{/each}}
@@ -701,15 +701,15 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details"><input type="text" value="{{this.section.name}}"></div>
 
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{#each this.tasks}}
@@ -719,7 +719,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details"><input type="text" value="{{task}}"></div>
@@ -732,13 +732,13 @@
                     </div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{/each}}
@@ -756,7 +756,7 @@
 
                 <div class="is-task-completed task-status-indicator"></div>
                 <div class="saving-indicator task-status-indicator"></div>
-                <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
             </div>
 
             <div class="task-details"><input type="text" value="{{task}}"></div>
@@ -764,13 +764,13 @@
             <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
             <div class="task-meta">
                 {{#hasNotes}}
-                <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                 {{/hasNotes}}
             </div>
             <div class="task-actions">
 
-                <div class="delete-task ti-trash" title="Delete Task"></div>
-                <div class="view-task ti-eye" title="View Task"></div>
+                <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                <div class="view-task ti-eye" title="Ver Tarefa"></div>
             </div>
         </li>
     </div>
@@ -789,7 +789,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details">{{task}}</div>
@@ -797,13 +797,13 @@
                     <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{/complete}}
@@ -816,15 +816,15 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details">{{this.section.name}}</div>
 
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{#each this.tasks}}
@@ -834,7 +834,7 @@
 
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator task-status-indicator"></div>
-                        <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                        <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     </div>
 
                     <div class="task-details">{{task}}</div>
@@ -842,13 +842,13 @@
                     <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                     </div>
                 </li>
                 {{/each}}
@@ -862,19 +862,19 @@
                         <div class="is-task-completed task-status-indicator"></div>
                         <div class="saving-indicator  task-status-indicator"></div>
                     </div>
-                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                    <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                     <div class="task-details">{{task}}</div>
                     <div class="task-assigned"><span class="tag">{{assignedToName}}</span></div>
                     <div class="task-due-date">{{dueDateHumanized}}</div>
                     <div class="task-meta">
                         {{#hasNotes}}
-                        <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                        <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                         {{/hasNotes}}
                     </div>
                     <div class="task-actions">
 
-                        <div class="delete-task ti-trash" title="Delete Task"></div>
-                        <div class="view-task ti-eye" title="View Task"></div>
+                        <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                        <div class="view-task ti-eye" title="Ver Tarefa"></div>
                         <div class="discuss-task ti-comment-alt" title="Discuss this task"></div>
                         <div class="start-timer-for-task ti-timer" title="Start Timer"></div>
                     </div>
@@ -899,13 +899,13 @@
             <div class="task-due-date">{{dueDateHumanized}}</div>
             <div class="task-meta">
                 {{#hasNotes}}
-                <span class="has-notes task-list-icon ti-notepad" title="This task has notes"></span>
+                <span class="has-notes task-list-icon ti-notepad" title="Esta tarefa tem notas"></span>
                 {{/hasNotes}}
             </div>
             <div class="task-actions">
 
-                <div class="delete-task ti-trash" title="Delete Task"></div>
-                <div class="view-task ti-eye" title="View Task"></div>
+                <div class="delete-task ti-trash" title="Apagar Tarefa"></div>
+                <div class="view-task ti-eye" title="Ver Tarefa"></div>
                 <div class="discuss-task ti-comment-alt" title=""></div>
                 <div class="start-timer-for-task ti-timer" title="Start Timer"></div>
             </div>
@@ -1290,7 +1290,7 @@
                                 <div class="status-indicators">
 
                                     <div class="saving-indicator task-status-indicator"></div>
-                                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                    <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                                 </div>
 
                                 <div class="task-details">{{task}}</div>
@@ -1317,7 +1317,7 @@
                                 <div class="status-indicators">
 
                                     <div class="saving-indicator task-status-indicator"></div>
-                                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                    <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                                 </div>
 
                                 <div class="task-details">{{task}}</div>
@@ -1344,7 +1344,7 @@
                                 <div class="status-indicators">
 
                                     <div class="saving-indicator task-status-indicator"></div>
-                                    <div class="retry-save save-item" title="Error saving task. Click to retry"></div>
+                                    <div class="retry-save save-item" title="Erro ao salvar a tarefa. Clique para tentar novamente"></div>
                                 </div>
 
                                 <div class="task-details">{{task}}</div>
@@ -1566,19 +1566,19 @@
         <form id="edit-user" action="#" method="post" data-model="user" novalidate>
 
             <div class="field">
-                <label for="">First Name</label>
+                <label for="">Nome</label>
                 <input type="text" required="required" name="first_name">
 
             </div>
 
             <div class="field">
-                <label for="">Last Name</label>
+                <label for="">Sobrenome</label>
                 <input type="text" required="required" name="last_name">
 
             </div>
 
             <div class="field">
-                <label for="">Email Address</label>
+                <label for="">E-mail</label>
                 <input type="text" required="required" name="email">
             </div>
 
@@ -1587,22 +1587,22 @@
 
             <div id="form-more">
                 <div class="field">
-                    <label for="">Address Line 1</label>
+                    <label for="">Endereço</label>
                     <input type="text" name="address1">
                 </div>
 
                 <div class="field">
-                    <label for="">Address Line 2</label>
+                    <label for="">Complemento</label>
                     <input type="text" name="address2">
                 </div>
 
                 <div class="field">
-                    <label for="">Phone</label>
+                    <label for="">Telefone</label>
                     <input type="text" name="phone">
                 </div>
             </div>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
 
@@ -1672,25 +1672,25 @@
             <div id="login-form">
                 <div id="form-overlay"></div>
                 <div class="form-content">
-                    <h2 class="login-title">Solo.</h2>
+                    <h2 class="login-title">Kanban</h2>
                     <h5 class="login-subtitle">Sign In</h5>
 
                     <div class="login-window">
 
 
-                        <p>Please log in to access your account</p>
+                        <p>Faça login para acessar sua conta</p>
 
                         <div id="login-status">{{message}}</div>
                         <form method="post">
 
                             <div class="login-fields">
                                 <div>
-                                    <input type="text" name="username" id="username" placeholder="Email Address">
+                                    <input type="text" name="username" id="username" placeholder="E-mail">
                                     <label class="icon ti-user" for="username"></label>
                                 </div>
 
                                 <div class="password-field">
-                                    <input type="password" name="password" id="password" placeholder="Password">
+                                    <input type="password" name="password" id="password" placeholder="Senha">
                                     <label class="icon ti-lock" for="password"></label>
                                 </div>
                             </div>
@@ -1702,14 +1702,14 @@
                                 <span class="ti-angle-right"></span>
                             </button>
 
-                            <a href="#forgot_password" class="forgot-password">Forgot Password?</a>
+                            <a href="#forgot_password" class="forgot-password">Esqueceu a senha?</a>
                         </form>
 
                     </div>
                 </div>
             </div>
             <div class="login-footer">
-                <a href="http://getsoloapp.com" target="_blank">Powered by Solo</a>
+                <a href="http://getsoloapp.com" target="_blank"></a>
             </div>
         </div>
 
@@ -1765,7 +1765,7 @@
 
     <div id="template-global-search-input">
         <div id="global-search-wrapper"><input id="global-search" type="text" value="" name="q" class="text"
-                                               placeholder="search"></div>
+                                               placeholder="pesquisar"></div>
     </div>
 
 
@@ -1794,13 +1794,13 @@
     <div id="template-form-project">
         <form id="project-form" action="#" method="post" data-model="project" novalidate>
             <div class="field">
-                <label for="">Project Name (required)</label>
+                <label for="">Nome(obrigatório)</label>
                 <input type="text" required="required" name="name">
 
             </div>
 
             <div class="field">
-                <label for="">Description</label>
+                <label for="">Descrição</label>
                 <textarea type="text" name="description"></textarea>
             </div>
 
@@ -1812,19 +1812,19 @@
     <div id="template-form-project-task">
         <form id="new-task-form" action="#" method="post" data-model="task" novalidate>
             <div class="field">
-                <label for="">Task (required)</label>
+                <label for="">Tarefa (obrigatório)</label>
                 <textarea rows=3 cols=20 name="task"></textarea>
             </div>
 
 
 
             <div class="field  notes-wrapper">
-                <label for="">Notes</label>
+                <label for="">Notas</label>
                 <textarea rows=3 cols=20 name="notes"></textarea>
             </div>
 
             <div class="field">
-                <label>Assigned To</label>
+                <label>Atribuído a</label>
                 <select name="assigned_to" data-placeholder="Assigned To">
                     <option></option>
                 </select>
