@@ -3328,8 +3328,9 @@ li.selected .bottom-details {
 }
 #boards-list a,
 #boards-list .board-content {
+  background-color: #eaeaae;
   text-decoration: none;
-  color: #a5acb6;
+  color: black;
   display: block;
   width: 100%;
   height: 100%;
@@ -3350,20 +3351,18 @@ li.selected .bottom-details {
 }
 #boards-list a p:before,
 #boards-list .board-content p:before {
-  content: '...';
   position: absolute;
   right: 0;
   bottom: 0;
 }
 #boards-list a p:after,
 #boards-list .board-content p:after {
-  content: '';
   position: absolute;
   right: 0;
   width: 1em;
   height: 1em;
   margin-top: 0.2em;
-  background: white;
+  
 }
 #boards-list p {
   font-size: 14px;
@@ -7853,6 +7852,7 @@ form#add-client,
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  margin-top: -50px;
 }
 .login-title {
   margin: 0 0 10px 0;
@@ -8035,7 +8035,7 @@ form#add-client,
   padding: 15px 20px;
   color: #fff;
   background-color: #A0B0C6;
-  background-color: #56A8FB;
+  background-color: #0a3276;
   font-size: 14px;
   text-transform: uppercase;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
