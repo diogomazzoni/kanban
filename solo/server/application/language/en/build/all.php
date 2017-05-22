@@ -1210,10 +1210,11 @@ $LANG['filters'] = array (
   'unpaid' => 'Não remunerado',
 );
 
-//calendar
+
+//calendário
 $LANG['calendar'] = array (
-  'monthNames' => 'January, February, March, April, May, June, July, August, September, October, November, December',
-  'dayNames' => 'Sun, Mon, Tue, Wed, Thu, Fri, Sat',
+  'monthNames' => 'Janeiro, Feveriro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro',
+  'dayNames' => 'Dom, Seg, Ter, Qua, Qui, Sex, Sab',
 );
 
 //entity_list
