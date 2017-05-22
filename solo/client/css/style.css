@@ -1213,6 +1213,8 @@ footer {
 }
 .panel.secondary .nano .content {
   outline: none !important;
+  background-image: url("../images/tasks/8621_chalkboard.jpg");
+  background-repeat: no-repeat;
 }
 @media (max-width: 1024px) {
   .panel.secondary .nano .content {
@@ -6807,7 +6809,7 @@ input.task-weight,
   margin-top: 100px;
 }
 .empty-task-list h3 {
-  color: #3d4651;
+  color: white;
   max-width: 500px;
   margin: 40px auto;
   line-height: 1.4;
@@ -7827,7 +7829,8 @@ form#add-client,
 }
 #login-form {
   width: 100%;
-  background: #F1F5F9;
+  /*background: #F1F5F9; */
+  background-image: url(../images/tasks/gest-indicadores.jpg);
   background-size: cover;
   position: relative;
   display: table;
