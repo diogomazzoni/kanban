@@ -460,7 +460,7 @@
     <div id="template-secondary-menu">
         <div id="secondary-menu">
 
-            <a id="logout-button" href="#logout"><span class="icons8-unlock"></span></a>
+            
         </div>
     </div>
 
@@ -1303,12 +1303,12 @@
                             </li>
                             {{/each}}
 
-                            <li class="sem tarefa">- Sem tarefa - </li>
+                            <li class="no-tasks">- Sem tarefa - </li>
 
                         </ul>
                     </div>
                     <div id="agenda-upcoming">
-                        <h4>Upcoming </h4>
+                        <h4>Próximo </h4>
                         <ul id="incomplete-tasks-list" class="upcoming-tasks list condensed task-list {{#if upcomingHasTasks}}has-tasks{{/if}}" data-due-date="upcoming">
                             {{#each upcoming}}
                             <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id="{{id}}" data-date="{{formattedDate}}">
@@ -1330,7 +1330,7 @@
                             </li>
                             {{/each}}
 
-                            <li class="sem tarefa">- Sem tarefa - </li>
+                            <li class="no-tasks">- Sem tarefa - </li>
 
                         </ul>
                     </div>
@@ -1357,7 +1357,7 @@
                             </li>
                             {{/each}}
 
-                            <li class="sem tarefa">- Sem tarefa - </li>
+                            <li class="no-tasks">- Sem tarefa - </li>
 
                         </ul>
                     </div>

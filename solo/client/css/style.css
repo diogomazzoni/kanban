@@ -7994,7 +7994,8 @@ form#add-client,
 #tasks-list-wrapper {
   padding-top: 20px;
   max-width: 100% !important;
-  padding-left: 10%;
+  padding-left: 5%;
+  padding-top:8%;
 }
 @media (max-width: 1024px) {
   #tasks-list-wrapper {
