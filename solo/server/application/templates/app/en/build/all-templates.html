@@ -111,7 +111,7 @@
 
             <div id="card-view-complete">
                 <div class="task-list-items">
-                <h5>Completed Tasks</h5>
+                <h5>Tarefas concluídas</h5>
                     <ul id="completed-tasks-list" class="list condensed task-list">
                         {{#each complete}}
                         <li id="task-{{id}}" class="{{statusClass}} {{classes}} completed" data-id={{id}}>
@@ -188,7 +188,7 @@
 
                                 {{#../userCanCreateTasks}}
                                 <div class="new-card">
-                                    <input class="new-task-input" type="text" placeholder="New task"
+                                    <input class="new-task-input" type="text" placeholder="Nova Tarefa"
                                            data-section-id="{{this.section.id}}">
                                 </div>
                                 {{/../userCanCreateTasks}}
@@ -252,7 +252,7 @@
             <h3>Editar Seção</h3>
 
             <div class="field">
-                <label for="">Section name</label>
+                <label for="">Nome da sessão</label>
                 <input id="set_section_name" type="text" name="name" value="{{section.name}}">
             </div>
 
@@ -459,8 +459,7 @@
 
     <div id="template-secondary-menu">
         <div id="secondary-menu">
-            <a id="settings-button" href="#settings"><span class="icons8-settings-filled"></span></a>
-            <a id="search-button" href="#search"><span class="icons8-search-filled"></span></a>
+
             <a id="logout-button" href="#logout"><span class="icons8-unlock"></span></a>
         </div>
     </div>
@@ -1264,14 +1263,14 @@
 
                         {{#if canCreateTask}}
                         <div class="summary-widget active" data-tab="tasks">
-                            <h5>My Tasks</h5>
+                            <h5>Minhas Tarefas</h5>
                         </div>
                         {{/if}}
 
 
 
                         <div class="summary-widget" data-tab="activity">
-                            <h5>Activity</h5>
+                            <h5>Atividades</h5>
                         </div>
 
                     </div>
@@ -1282,7 +1281,7 @@
 
 
                     <div id="agenda-today">
-                        <h4>Today</h4>
+                        <h4>Hoje</h4>
                         <ul id="incomplete-tasks-list" class="today-tasks list condensed task-list {{#if todayHasTasks}}has-tasks{{/if}}" data-due-date="today">
                             {{#each today}}
                             <li id="task-{{id}}" class="{{statusClass}} {{classes}}" data-id="{{id}}" data-date="{{formattedDate}}">
@@ -1304,7 +1303,7 @@
                             </li>
                             {{/each}}
 
-                            <li class="no-tasks">- No Tasks - </li>
+                            <li class="sem tarefa">- Sem tarefa - </li>
 
                         </ul>
                     </div>
@@ -1331,7 +1330,7 @@
                             </li>
                             {{/each}}
 
-                            <li class="no-tasks">- No Tasks - </li>
+                            <li class="sem tarefa">- Sem tarefa - </li>
 
                         </ul>
                     </div>
@@ -1358,7 +1357,7 @@
                             </li>
                             {{/each}}
 
-                            <li class="no-tasks">- No Tasks - </li>
+                            <li class="sem tarefa">- Sem tarefa - </li>
 
                         </ul>
                     </div>
@@ -1400,7 +1399,7 @@
 
                 </div>
                 <div class="open-projects">
-                    <h4>Your Boards</h4>
+                    <h4>Seus Projetos</h4>
                     <ul>
                         {{#each projects.models}}
                         <li class="{{statusText}}" data-id="{{id}}">
@@ -1934,10 +1933,10 @@
 
             {{#userIsAdmin}}
             <!--<div class="filter-dropdown">-->
-            <!--<div class="filter-button">Filter<span class="caret caret-down"></span></div>-->
+            <!--<div class="filter-button">Filtro<span class="caret caret-down"></span></div>-->
 
             <!--<ul class="dropdown-menu pull-right">-->
-            <!--<li id="filter-my-tasks"><span>My Tasks</span></li>-->
+            <!--<li id="filter-my-tasks"><span>Minhas Tarefas</span></li>-->
             <!--<li id="filter-all-tasks" class="selected"><span>All Tasks</span></li>-->
 
             <!--</ul>-->
@@ -1975,7 +1974,7 @@
             <span class="close vector-icon clickable">x</span>
 
             <p>{{description}}</p>
-            <a href="{{url}}">Go to task</a>
+            <a href="{{url}}">Ir para a tarefa</a>
         </div>
     </div>
 
@@ -2052,7 +2051,7 @@
 
 
                 <div>
-                    <h5>Total Time</h5>
+                    <h5>Tempo Total</h5>
                     <h3>{{formattedTotalTime}}</h3>
                 </div>
 
@@ -2067,7 +2066,7 @@
                 </div>
 
                 <div>
-                    <h5>Open Tasks</h5>
+                    <h5>Abrir Tarefas</h5>
                     <h3>{{taskCounts.incomplete}}</h3>
                 </div>
             </div>
@@ -2075,7 +2074,7 @@
 
             <div id="main-dashboard">
                 <div id="activity-stream-space" class="unfloat-on-mobile">
-                    <h5 class="section-title">Project Activity</h5>
+                    <h5 class="section-title">Atividade do Projeto</h5>
 
                     <div class="activity-stream">
 
@@ -2087,7 +2086,7 @@
 
                     {{#userIsAdmin}}
 
-                    <h5 class="section-title">Client</h5>
+                    <h5 class="section-title">Cliente</h5>
 
                     <p><span class="icon ti-user"></span><a
                             href="#clients/{{project.client_id}}">{{project.client_name}}</a></p>
@@ -2095,7 +2094,7 @@
 
 
                     <div class="people-section">
-                        <h5 class="section-title">People</h5>
+                        <h5 class="section-title">Pessoas</h5>
 
                         <div class="people-list">
                             <ul class="">
@@ -2199,7 +2198,7 @@
                 {{/activityItems}}
             </ul>
 
-            <div class="activity-show-all">Show All</div>
+            <div class="activity-show-all">Exibir tudo</div>
         </div>
 
     </div>
@@ -2211,9 +2210,9 @@
             <div class="filter-button"><span class="ti-angle-down"></span>Filter</div>
 
             <ul class="dropdown-menu pull-right">
-                <li data-filter-type="complete" data-filter-value="incomplete"><span>Incomplete</span></li>
-                <li data-filter-type="complete" data-filter-value="complete"><span>Complete</span></li>
-                <li data-filter-type="complete" data-filter-value="all"><span>All</span></li>
+                <li data-filter-type="complete" data-filter-value="incomplete"><span>Incompleto</span></li>
+                <li data-filter-type="complete" data-filter-value="complete"><span>Completo</span></li>
+                <li data-filter-type="complete" data-filter-value="all"><span>Todos</span></li>
 
 
                 <li class="divider"></li>
@@ -2229,7 +2228,7 @@
     <div id="template-project-notes">
         <div id="project-notes" class="project-notes">
             <div id="notes-content"></div>
-            <div id="no-notes" class="no-activity">No notes for this project</div>
+            <div id="no-notes" class="no-activity">Sem notas para este projeto</div>
         </div>
     </div>
 
@@ -2239,11 +2238,11 @@
                 <div class="filter-button"><span class="ti-angle-down"></span> Filter</div>
 
                 <ul class="dropdown-menu pull-right">
-                    <li data-filter-value="all"><span>All</span></li>
-                    <li data-filter-value="project"><span>Projects</span></li>
-                    <li data-filter-value="task"><span>Tasks</span></li>
+                    <li data-filter-value="all"><span>Todos</span></li>
+                    <li data-filter-value="project"><span>Projetos</span></li>
+                    <li data-filter-value="task"><span>Tarefas</span></li>
 
-                    <li data-filter-value="file"><span>Files</span></li>
+                    <li data-filter-value="file"><span>Arquivos</span></li>
 
                 </ul>
             </div>
@@ -2273,8 +2272,8 @@
 
                     <div class="list condensed project-list">
                         <div class="list-main-header">
-                            <div class="project-name">Name</div>
-                            <div class="project-due-date">Due Date</div>
+                            <div class="project-name">Nome</div>
+                            <div class="project-due-date">Data de Vencimento</div>
                             <div class="project-status">Status</div>
                         </div>
                         <ul class="list condensed">
@@ -2297,9 +2296,9 @@
 
                     <div class="list condensed search-task-list">
                         <div class="list-main-header">
-                            <div class="task-name">Task</div>
-                            <div class="task-project-name">Project</div>
-                            <div class="task-due-date">Due Date</div>
+                            <div class="task-name">Tarefa</div>
+                            <div class="task-project-name">Projetos</div>
+                            <div class="task-due-date">Data de Vencimento</div>
                             <div class="task-status">Status</div>
                         </div>
                         <ul class="list condensed">
@@ -2329,9 +2328,9 @@
 
                     <div class="list condensed file-list">
                         <div class="list-main-header">
-                            <div class="file-name">Name</div>
-                            <div class="file-type">Type</div>
-                            <div class="file-project-name">Project</div>
+                            <div class="file-name">Nome</div>
+                            <div class="file-type">Tipo</div>
+                            <div class="file-project-name">Projeto</div>
                         </div>
                         <ul class="list condensed">
                             {{#files}}
@@ -2383,15 +2382,15 @@
     <div id="template-form-change-password">
         <form id="change-password" action="#" method="post" data-model="changePassword">
             <div class="field">
-                <label for="">Current Password</label>
+                <label for="">Senha Atual</label>
                 <input type="password" name="current_password" required="required">
             </div>
             <div class="field">
-                <label for="">New Password</label>
+                <label for="">Nova Senha</label>
                 <input type="password" name="new_password" required="required">
             </div>
             <div class="field">
-                <label for="">Confirm New Password</label>
+                <label for="">Confirmar Nova Senha</label>
                 <input type="password" name="new_password_confirm" required="required">
             </div>
 
@@ -2403,13 +2402,13 @@
     <div id="template-form-send-password">
         <form id="sedn-password" action="#" method="post" data-model="sendPassword">
 
-            <p>This will reset the user's password and send a new one to their email address.</p>
+            <p>Isso redefinirá a senha do usuário e enviará uma nova para seu endereço de e-mail.</p>
 
             <input type="hidden" name="id" value="{{userId}}">
 
             <input type="submit" class="small" value="Send New Password">
 
-            <div class="button large">Cancel</div>
+            <div class="button large">Cancelar</div>
 
         </form>
     </div>
@@ -2629,13 +2628,13 @@ Check it out!
 
 <div id="template-delete-invoice">
     <div id="delete-invoice-form" class="form">
-        <p>Use this form to delete any invoice, even paid invoices.</p>
+        <p>Use este formulário para excluir qualquer fatura, até mesmo faturas pagas.</p>
 
         <div class="field">
             <label>Invoice Number</label>
             <input name="invoice_number" type="text">
         </div>
-        <div class="button submit red">Delete Invoice</div>
+        <div class="button submit red">Excluir fatura</div>
     </div>
 </div>
 
@@ -2667,7 +2666,7 @@ Check it out!
 
 <div id="template-form-new-project-from-template">
     <div id="new-project-from-template">
-        <p class="notification">Please review the project name, client, and dates. When you're done, click create.</p>
+        <p class="notification">Revise o nome do projeto, o cliente e as datas. Quando terminar, clique em criar.</p>
 
         <div id="template-project-form">
 
@@ -2682,9 +2681,9 @@ Check it out!
 
 <div id="template-start-timer-popup">
     <div id="start-timer-popup">
-        <p>Start timer for this task?</p>
-        <span class="button cancel">Cancel</span>
-        <span class="button submit">Start timer</span>
+        <p>Iniciar temporizador para esta tarefa?</p>
+        <span class="button cancel">Cancelar</span>
+        <span class="button submit">Iniciar temporizador</span>
     </div>
 </div>
 

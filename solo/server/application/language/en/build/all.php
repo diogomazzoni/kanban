@@ -427,7 +427,7 @@ $LANG['taskForm'] = array (
   'notes' => 'Notes',
   'assignedTo' => 'Assigned To',
   'dueDate' => 'Due Date',
-  'newTask' => 'New Task',
+  'newTask' => 'Nova tarefa',
   'editTask' => 'Edit Task',
   'addNotes' => 'Add notes to this task',
 );
@@ -1210,7 +1210,10 @@ $LANG['filters'] = array (
   'unpaid' => 'Não remunerado',
 );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> Traducao Parcial do Projeto
 //calendário
 $LANG['calendar'] = array (
   'monthNames' => 'Janeiro, Feveriro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro',

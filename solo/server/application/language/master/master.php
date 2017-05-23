@@ -2,7 +2,7 @@
 
 //form
 $LANG['form'] = array(
-    'submit' => 'Submit',
+    'submit' => 'Enviar',
 );
 
 //alert

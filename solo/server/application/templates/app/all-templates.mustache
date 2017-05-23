@@ -5,8 +5,8 @@
     <div id="template-dashboard-menu">
         <div class="link-menu">
             <ul>
-                <li class="boards-tab"><a href="#boards">Boards</a></li>
-                <li class="agenda-tab"><a href="#agenda">Your Agenda</a></li>
+                <li class="boards-tab"><a href="#boards">Cartões</a></li>
+                <li class="agenda-tab"><a href="#agenda">Projetos</a></li>
             </ul>
         </div>
     </div>
@@ -316,8 +316,8 @@
                 <li class="board new-board">
                     <div class="board-content">
                         <span class="new-board-icon">+</span>
-                        <h4>New Board</h4>
-                        <p>Create a new project board</p>
+                        <h4>Nova Lista</h4>
+                        <p>Crie uma nova lista</p>
                     </div>
                 </li>
                 {{/if}}
@@ -328,8 +328,8 @@
                 <li class="board new-board">
                     <div class="board-content">
                         <span class="new-board-icon">+</span>
-                        <h4>New Board</h4>
-                        <p>Create a new project board</p>
+                        <h4>Nova Lista</h4>
+                        <p>Crie uma nova lista</p>
                     </div>
                 </li>
                 {{/if}}
@@ -359,22 +359,22 @@
 
     <div id="template-board-dropdown">
         <ul class="board-dropdown dropdown-button-dropdown">
-            <li id="edit-board-button">Edit Board</li>
+            <li id="edit-board-button">Editar lista</li>
             {{#if isArchived}}
-            <li id="unarchive-board-button">Unarchive Board</li>
+            <li id="unarchive-board-button">Desarquivar lista</li>
             {{else}}
-            <li id="archive-board-button">Archive Board</li>
+            <li id="archive-board-button">Arquivar lista</li>
             {{/if}}
-            <li id="delete-board-button">Delete Board</li>
+            <li id="delete-board-button">Deletar lista</li>
         </ul>
     </div>
 
     <div id="template-board-buttons">
         <div class="link-menu">
             <ul>
-                <li class="tasks-tab"><a class="board-tasks" href="#boards/{{id}}/tasks">Tasks</a></li>
-                <li class="files-tab"><a class="board-files" href="#boards/{{id}}/files">Files</a></li>
-                <li class="notes-tab"><a class="board-notes" href="#boards/{{id}}/notes">Notes</a></li>
+                <li class="tasks-tab"><a class="board-tasks" href="#boards/{{id}}/tasks">Tarefas</a></li>
+                <li class="files-tab"><a class="board-files" href="#boards/{{id}}/files">Arquivos</a></li>
+                <li class="notes-tab"><a class="board-notes" href="#boards/{{id}}/notes">Notas</a></li>
             </ul>
         </div>
 
@@ -386,7 +386,7 @@
                 <li class="boards-button">
                     <a href="#boards">
                         <span class="icons8-briefcase icon"></span>
-                        <span class="text">Boards</span>
+                        <span class="text">Lista</span>
                     </a>
 
                 </li>
@@ -408,21 +408,21 @@
                 <li class="tasks-button">
                     <a href="#boards/{{id}}">
                         <span class="icons8-checked-checkbox-2 icon"></span>
-                        <span class="text">Tasks</span>
+                        <span class="text">Tarefas</span>
                     </a>
                 </li>
 
                 <li class="files-button">
                     <a href="#boards/{{id}}/files">
                         <span class="icons8-document icon"></span>
-                        <span class="text">Files</span>
+                        <span class="text">Arquivos</span>
                     </a>
                 </li>
 
                 <li class="notes-button">
                     <a href="#boards/{{id}}/notes">
                         <span class="icons8-info icon"></span>
-                        <span class="text">Notes</span>
+                        <span class="text">Notas</span>
                     </a>
                 </li>
             </ul>
@@ -517,7 +517,7 @@
     <div id="template-empty-task-list">
         <div class="empty-task-list">
             <img src="client/images/crane.svg" alt="">
-            <h3>No tasks yet. Add your first section, and then you can start adding tasks.</h3>
+            <h3>Nenhuma tarefa ainda. Adicione sua primeira seção e, em seguida, você pode começar a adicionar tarefas.</h3>
         </div>
     </div>
 
@@ -1376,7 +1376,7 @@
 
                 </div>
                 <div class="open-projects">
-                    <h4>Your Boards</h4>
+                    <h4>Seus Projetos</h4>
                     <ul>
                         {{#each projects.models}}
                         <li class="{{statusText}}" data-id="{{id}}">
@@ -1446,17 +1446,17 @@
                 <div class="send-email">
                     <img src="client/images/mail.gif" alt="">
                     <h5 class="title">Contact Us</h5>
-                    <p>Have a general question that's not answered in our Articles? We will get back to you asap.</p>
+                    <p>Tem uma pergunta geral que não é respondida em nossos artigos? Nós entraremos em contato com você assim que possível.</p>
                     <div id="contact-us-button" class="button">Contact Us</div>
                 </div>
             </div>
             <div id="support-message">
 
                 <form action="#" method="post" data-model="helpContact" novalidate>
-                    <p>Send us a message to get help</p>
+                    <p>Envie-nos uma mensagem para obter ajuda</p>
                     <div class="field">
-                        <label for="" class="large">Please describe your question or issue. Please provide as much information as possible
-                            and you will receive a response as quickly as possible.</label>
+                        <label for="" class="large">Descreva a sua pergunta ou questão. Forneça o máximo de informações possível
+                            e você receberá uma resposta o mais rápido possível.</label>
 
                         <textarea placeholder="Type your question here" name="message" required="required"></textarea>
 
@@ -1465,12 +1465,12 @@
                 </form>
             </div>
             <div id="contact-sent">
-                <h4>Message Sent</h4>
-                <p>Your message has been sent and response will be sent to your email <span class="user-email">{{email}}</span> as soon as possible</p>
+                <h4>Mensagem enviada</h4>
+                <p>A sua mensagem foi enviada e a resposta será enviada para o seu e-mail <span class="user-email">{{email}}</span>o mais rápido possível.</p>
             </div>
             <div id="contact-error">
-                <h4>Something went wrong</h4>
-                <p>We were unable to send your message. Please send your message directly to duet@23andwalnut.com</p>
+                <h4>Algo deu errado</h4>
+                <p>Não foi possível enviar sua mensagem. Envie sua mensagem diretamente para duet@23andwalnut.com</p>
                 <div class="user-message"></div>
             </div>
         </div>
@@ -1479,10 +1479,10 @@
 
     <div id="template-finish-setup">
         <div id="finish-setup">
-            <h4 class="title">Next steps</h4>
+            <h4 class="title">Próximos passos</h4>
             <ul>
                 <li>
-                    <h4><span>1</span>Make sure you set up emails</h4>
+                    <h4><span>1</span>Certifique-se de configurar emails</h4>
 
                     <p>The default configuration uses php's built in mail() function. This
                     works fine on some hosts, but many block this funtion, which means the Duet
@@ -1758,7 +1758,7 @@
         <div class="modal-overlay">
             <div class="modal">
                 <div class="modal-info">
-                    <h3>{{title}}</h3>
+                    <h3>Título</h3>
 
                     <div class="close ti-close"></div>
                 </div>
@@ -1777,10 +1777,10 @@
 
             <div class="field">
                 <label for="">Description</label>
-                <textarea type="text" name="description"></textarea>
+                <textarea type="text" name="description"/>
             </div>
 
-            <input type="submit" value="Submit">
+      
         </form>
     </div>
 
@@ -2394,9 +2394,9 @@
     <div id="template-settings-menu">
         <ul class="link-menu">
             <li class="general-tab"><a href="#admin-settings-overview">Overview</a></li>
-            <li><a href="#admin-general">General</a></li>
-            <li><a href="#scheduled-tasks">Scheduled Tasks</a></li>
-            <li><a href="#admin-feedback">Referrals</a></li>
+            <li><a href="#admin-general">Geral</a></li>
+            <li><a href="#scheduled-tasks">Atividades Agendadas</a></li>
+            <li><a href="#admin-feedback">Referências</a></li>
         </ul>
     </div>
 
@@ -2416,7 +2416,7 @@
                         <li data-setting="{{name}}" data-value="{{value}}" data-description="{{description}}"
                             data-info="{{info}}" data-type="{{type}}">
                             <span><strong>{{description}}: </strong></span>{{value}}
-                            <span class="edit-setting">Edit</span></li>
+                            <span class="edit-setting">Editar</span></li>
                         {{/values}}
                     </ul>
                     {{/settings}}
@@ -2497,7 +2497,7 @@
                         </div>
 
                         <div class="field">
-                            <label>Message</label>
+                            <label>Mensagem</label>
                         <textarea class="form-control" name="message" id="" cols="30" rows="10" required="required">
 
                         </textarea>
@@ -2512,7 +2512,7 @@
 
 
                     <div id="social-shares">
-                        <p>Share on social media</p>
+                        <p>Compartilhar em redes sociais</p>
 
                         <div class="share-option">
                             <a id="twitter-button" target="_blank"
@@ -2523,20 +2523,20 @@
                         <div class="share-option">
                             <a id="facebook-button" target="_blank"
                                href="http://www.facebook.com/share.php?u=https://duetapp.com&t=Duet+-+A+great+project+management+app+for+small+businesses+http%3a%2f%2fduetapp.com%20@23andWalnut&v=4"><span
-                                    class="share-icon ti-facebook"></span>Share on Facebook</a>
+                                    class="share-icon ti-facebook"></span>Compartilhar no Facebook</a>
                         </div>
 
                         <div class="share-option">
                             <a id="linkedin-button" target="_blank"
                                href="http://www.linkedin.com/shareArticle?mini=true&url=https://duetapp.com&title=Duet+-+A+great+project+management+app+for+small+businesses+http%3a%2f%2fduetapp.com&summary=A+beautiful+self+hosted+project+management+app+with+a+low+one+time+fee&source=https://duetapp.com"><span
-                                    class="share-icon ti-linkedin"></span>Share on LinkedIn</a>
+                                    class="share-icon ti-linkedin"></span>Compartilhar no LinkedIn</a>
                         </div>
 
 
                         <div class="share-option">
                             <a id="google-button" target="_blank"
                                href="https://plus.google.com/share?url=http%3a%2f%2fduetapp.com"><span
-                                    class="share-icon ti-google"></span>Share on Google+</a>
+                                    class="share-icon ti-google"></span>Compartilhar no Google+</a>
                         </div>
 
                     </div>
@@ -2547,9 +2547,9 @@
 
 
                 <div>
-                    <h4>Feedback</h4>
+                    <h4>Comentários</h4>
 
-                    <p>Do you have suggestions on how to improve Duet? I would love to hear from you.</p>
+                    <p>Você tem sugestões sobre como melhorar o Solo? Eu adoraria ouvir de você.</p>
 
                     <form id="feedback-form" action="#">
                         <div class="field"><textarea class="form-control" name="message" required="required" id=""

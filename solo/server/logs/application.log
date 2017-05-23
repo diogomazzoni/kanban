@@ -466,3 +466,115 @@ Stack trace:
     #6 /home/ubuntu/workspace'
     file: '/home/ubuntu/workspace/solo/server/core/database/db.connection.class.php'
     line: 252
+[2017-05-19 0:36:58] [error] Invalid TimeEntry(id - )
+    task_id: array(
+        0 => 'This field is required',
+    )
+[2017-05-19 0:36:58] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1, driver error code is 1064 SQL: SELECT * FROM time_entries WHERE task_id =  Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+#1 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(96): phpSweetPDO\Recordset->__construct(Object(PDOStatement), Array)
+#2 /home/ubuntu/workspace/solo/server/core/model.class.php(115): phpSweetPDO\Connection->select('SELECT * FROM t...')
+#3 /home/ubuntu/workspace/solo/server/application/models/task.php(360): Model->get('WHERE task_id =...')
+#4 /home/ubuntu/workspace/solo/server/application/models/timeentry.php(58): Task->update_total_time()
+#5 /home/u
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1, driver error code is 1064 SQL: SELECT * FROM time_entries WHERE task_id =  Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+    #1 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(96): phpSweetPDO\Recordset->__construct(Object(PDOStatement), Array)
+    #2 /home/ubuntu/workspace/solo/server/core/model.class.php(115): phpSweetPDO\Connection->select('SELECT * FROM t...')
+    #3 /home/ubuntu/workspace/solo/server/application/models/task.php(360): Model->get('WHERE task_id =...')
+    #4 /home/ubuntu/workspace/solo/server/application/models/timeentry.php(58): Task->update_total_time()
+    #5 /home/u'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php'
+    line: 89
+[2017-05-19 0:37:01] [error] Invalid TimeEntry(id - )
+    task_id: array(
+        0 => 'This field is required',
+    )
+[2017-05-19 0:37:01] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1, driver error code is 1064 SQL: SELECT * FROM time_entries WHERE task_id =  Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+#1 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(96): phpSweetPDO\Recordset->__construct(Object(PDOStatement), Array)
+#2 /home/ubuntu/workspace/solo/server/core/model.class.php(115): phpSweetPDO\Connection->select('SELECT * FROM t...')
+#3 /home/ubuntu/workspace/solo/server/application/models/task.php(360): Model->get('WHERE task_id =...')
+#4 /home/ubuntu/workspace/solo/server/application/models/timeentry.php(58): Task->update_total_time()
+#5 /home/u
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1, driver error code is 1064 SQL: SELECT * FROM time_entries WHERE task_id =  Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+    #1 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(96): phpSweetPDO\Recordset->__construct(Object(PDOStatement), Array)
+    #2 /home/ubuntu/workspace/solo/server/core/model.class.php(115): phpSweetPDO\Connection->select('SELECT * FROM t...')
+    #3 /home/ubuntu/workspace/solo/server/application/models/task.php(360): Model->get('WHERE task_id =...')
+    #4 /home/ubuntu/workspace/solo/server/application/models/timeentry.php(58): Task->update_total_time()
+    #5 /home/u'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php'
+    line: 89
+[2017-05-19 0:37:01] [error] Invalid TimeEntry(id - )
+    task_id: array(
+        0 => 'This field is required',
+    )
+[2017-05-19 0:37:01] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1, driver error code is 1064 SQL: SELECT * FROM time_entries WHERE task_id =  Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+#1 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(96): phpSweetPDO\Recordset->__construct(Object(PDOStatement), Array)
+#2 /home/ubuntu/workspace/solo/server/core/model.class.php(115): phpSweetPDO\Connection->select('SELECT * FROM t...')
+#3 /home/ubuntu/workspace/solo/server/application/models/task.php(360): Model->get('WHERE task_id =...')
+#4 /home/ubuntu/workspace/solo/server/application/models/timeentry.php(58): Task->update_total_time()
+#5 /home/u
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1, driver error code is 1064 SQL: SELECT * FROM time_entries WHERE task_id =  Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+    #1 /home/ubuntu/workspace/solo/server/core/database/db.connection.class.php(96): phpSweetPDO\Recordset->__construct(Object(PDOStatement), Array)
+    #2 /home/ubuntu/workspace/solo/server/core/model.class.php(115): phpSweetPDO\Connection->select('SELECT * FROM t...')
+    #3 /home/ubuntu/workspace/solo/server/application/models/task.php(360): Model->get('WHERE task_id =...')
+    #4 /home/ubuntu/workspace/solo/server/application/models/timeentry.php(58): Task->update_total_time()
+    #5 /home/u'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php'
+    line: 89
+[2017-05-22 23:49:04] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY tasks.id ORDER BY `position` ASC' at line 5, driver error code is 1064 SQL: SELECT tasks.*, files.name AS file, CONCAT(users.first_name, ' ', users.last_name) AS assigned_to_name, projects.name AS project_name
+                FROM tasks
+                LEFT JOIN users ON users.id = tasks.assigned_to
+                LEFT JOIN projects on projects.id = tasks.project_id
+                LEFT JOIN files ON files.entity_type = 'task' AND files.entity_id = tasks.id WHERE  tasks.project_id = GROUP BY tasks.id ORDER BY `position` ASC Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+#1 /home/ubuntu/workspac
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY tasks.id ORDER BY `position` ASC' at line 5, driver error code is 1064 SQL: SELECT tasks.*, files.name AS file, CONCAT(users.first_name, ' ', users.last_name) AS assigned_to_name, projects.name AS project_name
+                                    FROM tasks
+                                    LEFT JOIN users ON users.id = tasks.assigned_to
+                                    LEFT JOIN projects on projects.id = tasks.project_id
+                                    LEFT JOIN files ON files.entity_type = 'task' AND files.entity_id = tasks.id WHERE  tasks.project_id = GROUP BY tasks.id ORDER BY `position` ASC Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+    #1 /home/ubuntu/workspac'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php'
+    line: 89
+[2017-05-22 23:49:11] [error] Fatal Error (1): Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY tasks.id ORDER BY `position` ASC' at line 5, driver error code is 1064 SQL: SELECT tasks.*, files.name AS file, CONCAT(users.first_name, ' ', users.last_name) AS assigned_to_name, projects.name AS project_name
+                FROM tasks
+                LEFT JOIN users ON users.id = tasks.assigned_to
+                LEFT JOIN projects on projects.id = tasks.project_id
+                LEFT JOIN files ON files.entity_type = 'task' AND files.entity_id = tasks.id WHERE  tasks.project_id = GROUP BY tasks.id ORDER BY `position` ASC Arguments: array (
+)' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+Stack trace:
+#0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+#1 /home/ubuntu/workspac
+    code: 1
+    message: 'Uncaught exception 'phpSweetPDO\Exceptions\DbException' with message 'Database error [42000]: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY tasks.id ORDER BY `position` ASC' at line 5, driver error code is 1064 SQL: SELECT tasks.*, files.name AS file, CONCAT(users.first_name, ' ', users.last_name) AS assigned_to_name, projects.name AS project_name
+                                    FROM tasks
+                                    LEFT JOIN users ON users.id = tasks.assigned_to
+                                    LEFT JOIN projects on projects.id = tasks.project_id
+                                    LEFT JOIN files ON files.entity_type = 'task' AND files.entity_id = tasks.id WHERE  tasks.project_id = GROUP BY tasks.id ORDER BY `position` ASC Arguments: array()' in /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php:89
+    Stack trace:
+    #0 /home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php(77): phpSweetPDO\Recordset->_refresh()
+    #1 /home/ubuntu/workspac'
+    file: '/home/ubuntu/workspace/solo/server/core/database/db.recordset.class.php'
+    line: 89
