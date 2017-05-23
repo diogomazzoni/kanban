@@ -1449,8 +1449,9 @@ footer {
   padding-left: 40px;
 }
 .inner-menu {
-  margin: 10px 0 20px 0;
+  margin: 0px 0 20px 0;
   position: relative;
+  
   padding-right: 40px;
   padding-left: 40px;
   z-index: 1;
@@ -3340,6 +3341,7 @@ li.selected .bottom-details {
   position: absolute;
   top: 0;
   left: 0;
+	border-radius: 2px;
 }
 #boards-list a p,
 #boards-list .board-content p {
