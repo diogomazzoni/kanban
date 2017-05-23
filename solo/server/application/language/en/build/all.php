@@ -1210,10 +1210,6 @@ $LANG['filters'] = array (
   'unpaid' => 'Não remunerado',
 );
 
-<<<<<<< HEAD
-
-=======
->>>>>>> Traducao Parcial do Projeto
 //calendário
 $LANG['calendar'] = array (
   'monthNames' => 'Janeiro, Feveriro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro',
